@@ -1,11 +1,11 @@
+import itertools
 import json
 import os
 import re
-from turtle import title
 from murmurhash import mrmr
 
 SEED = 0x4EB23
-LONG = True
+LONG = False
 MAP_PATH = os.path.join(os.path.dirname(__file__), "map.json")
 
 
@@ -39,16 +39,18 @@ def check_hashes(track_names, known_track_names, known_track_hashes):
             and track_name not in new_hits
         ):
             new_hits.append(track_name)
+            print(f"New hit: {track_name} -> {generated_track_hash}")
         elif track_name in known_track_names and track_name not in known_hits:
             known_hits.append(track_name)
-        else:
-            fails.append(track_name)
+            print(f"Known hit: {track_name} -> {generated_track_hash}")
+        # else:
+        #     fails.append(track_name)
 
         generated_track_hashes.append(generated_track_hash)
 
-    print(f"{len(known_hits)} known hits:", known_hits)
-    print(f"{len(new_hits)} new hits:", new_hits)
-    print(f"{len(fails)} fails")
+    # print(f"{len(known_hits)} known hits:", known_hits)
+    # print(f"{len(new_hits)} new hits:", new_hits)
+    # print(f"{len(fails)} fails")
 
 
 def split_separator(known_track_name):
@@ -103,7 +105,8 @@ def generate_potential_track_names(known_track_names):
         "backward",
         "back",
     ]
-    extras = [""] + extra_directions + extra_body_parts
+    extra_poses = ["Frown", "Smile"]
+    extras = [""] + extra_directions + extra_body_parts + extra_poses
 
     potential_track_name_sections = []
     for extra in extras:
@@ -127,23 +130,28 @@ def generate_potential_track_names(known_track_names):
     separators = ["", " ", "_", "-"]
     print(f"{len(separators)} separators:", separators)
     if LONG:
-        potential_track_names = [
+        potential_track_names = (
             f"{sec1}{sep1}{sec2}{sep2}{sec3}{sep3}{sec4}"
-            for sec1 in potential_track_name_sections
-            for sec2 in potential_track_name_sections
-            for sec3 in potential_track_name_sections
-            for sec4 in potential_track_name_sections
-            for sep1 in separators
-            for sep2 in separators
-            for sep3 in separators
-        ]
+            for sec1, sep1, sec2, sep2, sec3, sep3, sec4 in itertools.product(
+                potential_track_name_sections,
+                separators,
+                potential_track_name_sections,
+                separators,
+                potential_track_name_sections,
+                separators,
+                potential_track_name_sections,
+            )
+        )
+
     else:
-        potential_track_names = [
+        potential_track_names = (
             f"{sec1}{sep1}{sec2}"
-            for sec1 in potential_track_name_sections
-            for sec2 in potential_track_name_sections
-            for sep1 in separators
-        ]
+            for sec1, sep1, sec2 in itertools.product(
+                potential_track_name_sections,
+                separators,
+                potential_track_name_sections,
+            )
+        )
 
     return potential_track_names
 
@@ -152,7 +160,7 @@ if __name__ == "__main__":
     known_track_names, known_track_hashes = get_known_track_names()
     print(f"{len(known_track_names)} known track names: {sorted(known_track_names)}")
 
-    found_track_names = ["Head_Roll_Pos", "Head_Pitch_Pos", "Head_Yaw_Pos"]
+    found_track_names = ["Head_Roll_Pos", "Head_Pitch_Pos", "Head_Yaw_Pos", "Rest Pose"]
     print(f"{len(found_track_names)} found track names: {found_track_names}")
 
     docs_track_names = [
@@ -190,14 +198,17 @@ if __name__ == "__main__":
         "Brows_Anger",
         "Brows_Happy",
         "Brows_Pain",
+        "CDGKNRSTh",
+        "CDGKNRS",
     ]
 
     potential_track_names = generate_potential_track_names(
         known_track_names + found_track_names + docs_track_names
     )
 
-    check_hashes(
-        potential_track_names + docs_track_names,
-        known_track_names,
-        known_track_hashes,
-    )
+    for potential_track_name in potential_track_names:
+        check_hashes(
+            [potential_track_name],
+            known_track_names,
+            known_track_hashes,
+        )
