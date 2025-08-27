@@ -2,12 +2,23 @@ import itertools
 import json
 import os
 import re
+import string
 from murmurhash import mrmr
 
 SEED = 0x4EB23
 LENGTH = 3
-MAP_PATH = os.path.join(os.path.dirname(__file__), "map.json")
-NEW_MAP_PATH = os.path.join(os.path.dirname(__file__), "new_map.json")
+# MAP_PATH = os.path.join(os.path.dirname(__file__), "map.json")
+# NEW_MAP_PATH = os.path.join(os.path.dirname(__file__), "new_map.json")
+MAP_PATH = os.path.join(os.path.dirname(__file__), "bones_map.json")
+NEW_MAP_PATH = os.path.join(os.path.dirname(__file__), "new_bones_map.json")
+
+found_track_names = [
+    "Head_Roll_Pos",
+    "Head_Pitch_Pos",
+    "Head_Yaw_Pos",
+    "Rest Pose",
+    "lips_funnel",
+]
 
 docs_track_names = [
     "PBM",
@@ -63,21 +74,87 @@ extra_body_parts = [
     "jaw",
     "philtrum",
     "larynx",
+    "teeth",
+    "chin",
+    "lid",
+    "bone",
 ]
 
 extra_directions = [
     "in",
     "out",
+    "up",
     "down",
     "left",
     "right",
     "high",
     "forward",
+    "fw",
     "backward",
     "back",
+    "bk",
 ]
 
-extra_poses = ["Frown", "Smile"]
+extra_poses = [
+    "Frown",
+    "Smile",
+    "Surprise",
+    "Neutral",
+    "wrinkle",
+    "pout",
+    "smirk",
+]
+
+ipa = [
+    "p",
+    "b",
+    "t",
+    "d",
+    "k",
+    "g",
+    "m",
+    "n",
+    "ŋ",
+    "tʃ",
+    "ʃ",
+    "dʒ",
+    "ʒ",
+    "f",
+    "v",
+    "θ",
+    "ð",
+    "s",
+    "z",
+    "ʃ",
+    "ʒ",
+    "h",
+    "w",
+    "j",
+    "r",
+    "l",
+    "i",
+    "ɪ",
+    "e",
+    "ɛ",
+    "æ",
+    "ʌ",
+    "ə",
+    "u",
+    "ʊ",
+    "oʊ",
+    "ɔ",
+    "ɑ",
+    "aɪ",
+    "ɪ",
+    "aʊ",
+    "a",
+    "ʊ",
+    "ɔɪ",
+    "ɔ",
+    "ɪ",
+    "x",
+    "ʔ",
+]
 
 
 def split_on_separator(known_track_name):
@@ -127,7 +204,16 @@ def get_known_track_names(map_json):
 
 
 def generate_potential_track_names(known_track_names):
-    extras = [""] + extra_directions + extra_body_parts + extra_poses
+    extras = (
+        ["", "/"]
+        + extra_directions
+        + extra_body_parts
+        + extra_poses
+        + [str(i) for i in range(10)]
+        + [f"0{i}" for i in range(10)]
+        + list(string.ascii_lowercase)
+        + ipa
+    )
 
     potential_track_name_sections = []
     for extra in extras:
@@ -197,7 +283,7 @@ def check_hash(track_name, known_track_names, known_track_hashes, map_json):
 
     if (
         generated_track_hash in known_track_hashes
-        and track_name not in known_track_names
+        and track_name not in known_track_names + found_track_names
     ):
         write_track_name(track_name, generated_track_hash)
         print(f"New hit: {track_name} -> {generated_track_hash}")
@@ -213,7 +299,6 @@ if __name__ == "__main__":
     known_track_names, known_track_hashes = get_known_track_names(map_json)
     print(f"{len(known_track_names)} known track names: {sorted(known_track_names)}")
 
-    found_track_names = ["Head_Roll_Pos", "Head_Pitch_Pos", "Head_Yaw_Pos", "Rest Pose"]
     print(f"{len(found_track_names)} found track names: {found_track_names}")
 
     potential_track_names = generate_potential_track_names(
