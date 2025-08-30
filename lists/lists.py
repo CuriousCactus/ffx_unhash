@@ -1,5 +1,5 @@
 import itertools
-from string_utils import get_capitalisation_variants
+from utils.string_utils import get_capitalisation_variants
 import string
 
 separators = ["", " ", "_", "-"]
@@ -166,7 +166,7 @@ ipa = [
 
 lower_case_letters = list(string.ascii_lowercase)
 numbers = [str(i) for i in range(15)]
-number_with_leading_zeros = [f"0{i}" for i in range(10)]
+numbers_with_leading_zero = [f"0{i}" for i in range(10)]
 
 extras_no_cap_variants = (
     ["", "s", "/"]
@@ -174,7 +174,7 @@ extras_no_cap_variants = (
     + extra_body_parts
     + extra_poses
     # + numbers
-    # + number_with_leading_zeros
+    # + numbers_with_leading_zero
     # + lower_case_letters
     # + ipa
 )

@@ -48,9 +48,8 @@ def generate_potential_track_name_sections(known_track_names, extras):
     potential_track_name_sections.extend(extras)
     potential_track_name_sections = list(set(potential_track_name_sections))
 
-    print(
-        f"{len(potential_track_name_sections)} potential sections: {potential_track_name_sections}"
-    )
+    print(f"{len(potential_track_name_sections)} potential sections:")
+    print(*sorted(potential_track_name_sections), sep="\n")
 
     return potential_track_name_sections
 

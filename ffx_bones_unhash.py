@@ -1,33 +1,55 @@
-from lists import (
+from lists.lists import (
     separators,
     found_track_names,
     docs_track_names,
     lower_case_letters,
-    number_with_leading_zeros,
-    extras,
+    numbers_with_leading_zero,
+    numbers,
+    extras_no_cap_variants,
 )
-from string_utils import generate_potential_track_name_sections
-from file_utils import load_bones_map, get_known_track_names
-from hash_utils import search_for_known_hashes
+from utils.string_utils import generate_potential_track_name_sections
+from utils.file_utils import load_map, get_known_track_names
+from utils.hash_utils import search_for_known_hashes
+import os
+
+
+BONES_MAP_PATH = os.path.join(os.path.dirname(__file__), "maps/bones_map.json")
+BONES_MAP_NEW_PATH = os.path.join(os.path.dirname(__file__), "maps/bones_map_new.json")
 
 
 if __name__ == "__main__":
-    map_json = load_bones_map()
+    map_json = load_map(BONES_MAP_PATH)
 
     known_track_names, known_track_hashes = get_known_track_names(map_json)
 
     potential_track_name_sections = generate_potential_track_name_sections(
         known_track_names,
-        extras,
+        [],
     )
 
-    sec1_list = potential_track_name_sections
-    sep1_list = ["_"]
+    potential_track_name_sections_no_numbers = list(
+        filter(
+            lambda x: x not in numbers_with_leading_zero + numbers,
+            potential_track_name_sections,
+        )
+    )
+
+    potential_track_name_sections_short = list(
+        filter(lambda x: len(x) <= 2, potential_track_name_sections)
+    ) + ["driver"]
+
+    sec1_list = potential_track_name_sections_no_numbers
+    sep1_list = ["", "_"]
     sec2_list = potential_track_name_sections
-    sep2_list = ["_"]
-    sec3_list = potential_track_name_sections + number_with_leading_zeros + [""]
+    sep2_list = ["", "_"]
+    sec3_list = potential_track_name_sections + [""]
     sep3_list = ["", "_"]
-    sec4_list = number_with_leading_zeros + [""]
+    sec4_list = (
+        list(range(4))
+        + numbers_with_leading_zero
+        + potential_track_name_sections_short
+        + [""]
+    )
     sep4_list = [""]
     sec5_list = [""]
 
@@ -43,4 +65,5 @@ if __name__ == "__main__":
         sec5_list,
         known_track_names,
         known_track_hashes,
+        BONES_MAP_NEW_PATH,
     )
