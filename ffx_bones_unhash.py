@@ -1,6 +1,5 @@
 from lists.lists import (
     separators,
-    found_track_names,
     docs_track_names,
     lower_case_letters,
     numbers_with_leading_zero,
@@ -18,7 +17,7 @@ BONES_MAP_NEW_PATH = os.path.join(os.path.dirname(__file__), "maps/bones_map_new
 
 
 if __name__ == "__main__":
-    map_json = load_map(BONES_MAP_PATH)
+    map_json = load_map(BONES_MAP_NEW_PATH)
 
     known_track_names, known_track_hashes = get_known_track_names(map_json)
 

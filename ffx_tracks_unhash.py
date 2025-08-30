@@ -16,15 +16,12 @@ TRACKS_MAP_NEW_PATH = os.path.join(
 )
 
 if __name__ == "__main__":
-    map_json = load_map(TRACKS_MAP_PATH)
+    map_json = load_map(TRACKS_MAP_NEW_PATH)
 
     known_track_names, known_track_hashes = get_known_track_names(map_json)
 
-    print(f"{len(found_track_names)} found track names:")
-    print(*sorted(found_track_names), sep=", ")
-
     potential_track_name_sections = generate_potential_track_name_sections(
-        known_track_names + found_track_names + docs_track_names, extras_cap_variants
+        known_track_names + docs_track_names, extras_cap_variants
     )
 
     sec1_list = potential_track_name_sections
