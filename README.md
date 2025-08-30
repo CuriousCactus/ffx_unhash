@@ -1,1 +1,2 @@
-You need the murmurhash-lxneng fork as the base package doesn't expose hash64_py
+pip install murmurhash-lxneng
+Using a fork as the base package doesn't expose hash64_py
