@@ -21,7 +21,7 @@ if __name__ == "__main__":
     known_track_names, known_track_hashes = get_known_track_names(map_json)
 
     print(f"{len(found_track_names)} found track names:")
-    print(*sorted(found_track_names), sep="\n")
+    print(*sorted(found_track_names), sep=", ")
 
     potential_track_name_sections = generate_potential_track_name_sections(
         known_track_names + found_track_names + docs_track_names, extras_cap_variants
@@ -32,20 +32,20 @@ if __name__ == "__main__":
     sec2_list = potential_track_name_sections
     sep2_list = separators
     sec3_list = potential_track_name_sections
-    sep3_list = ["_"]
-    sec4_list = [""]
+    sep3_list = separators
+    sec4_list = ["", "bs", "output"]
     sep4_list = [""]
     sec5_list = [""]
 
     search_for_known_hashes(
-        sep1_list,
         sec1_list,
-        sep2_list,
+        sep1_list,
         sec2_list,
-        sep3_list,
+        sep2_list,
         sec3_list,
-        sep4_list,
+        sep3_list,
         sec4_list,
+        sep4_list,
         sec5_list,
         known_track_names,
         known_track_hashes,

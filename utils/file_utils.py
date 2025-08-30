@@ -24,6 +24,6 @@ def get_known_track_names(map_json):
         known_track_hashes.append(int(key))
 
     print(f"{len(known_track_names)} known track names:")
-    print(*sorted(known_track_names), sep="\n")
+    print(*sorted(known_track_names), sep=", ")
 
     return known_track_names, known_track_hashes

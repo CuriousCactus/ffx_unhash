@@ -69,14 +69,14 @@ def search_for_known_hashes(
     print(f"Time taken: {(end - start)/ 3600:.2f} hours")
 
     print(f"Re-found {len(re_found_hits)} known hits:")
-    print(*sorted(re_found_hits), sep="\n")
+    print(*sorted(re_found_hits), sep=", ")
 
     if len(re_found_hits) < len(known_track_names):
         print(
             f"Warning: Only re-found {len(re_found_hits)} of {len(known_track_names)} known track names!"
         )
         print(f"Missing:")
-        print(*sorted(set(known_track_names) - set(re_found_hits)), sep="\n")
+        print(*sorted(set(known_track_names) - set(re_found_hits)), sep=", ")
 
     print(f"Found {len(new_hists)} new hits:")
-    print(*sorted(new_hists), sep="\n")
+    print(*sorted(new_hists), sep=", ")

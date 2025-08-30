@@ -37,7 +37,7 @@ def get_capitalisation_variants(known_track_name):
 
 
 def generate_potential_track_name_sections(known_track_names, extras):
-    potential_track_name_sections = []
+    potential_track_name_sections = [""]
 
     for known_track_name in known_track_names:
         sections = split(known_track_name)
@@ -49,7 +49,7 @@ def generate_potential_track_name_sections(known_track_names, extras):
     potential_track_name_sections = list(set(potential_track_name_sections))
 
     print(f"{len(potential_track_name_sections)} potential sections:")
-    print(*sorted(potential_track_name_sections), sep="\n")
+    print(*sorted(potential_track_name_sections), sep=", ")
 
     return potential_track_name_sections
 
