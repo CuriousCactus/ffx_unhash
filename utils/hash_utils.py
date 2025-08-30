@@ -2,19 +2,22 @@ from murmurhash import mrmr
 import time
 from utils.file_utils import write_track_name
 from utils.string_utils import generate_potential_track_names
+from multiprocessing import Pool, cpu_count
+import itertools
+from functools import partial
 
 SEED = 0x4EB23
 
 
-def check_hash(track_name, known_track_hashes):
+def check_hash(known_track_hashes, track_name):
     generated_track_hash = (
         mrmr.hash64_py(track_name.encode(), seed=SEED) & 0xFFFFFFFFFFFFFFFF
     )
 
     if generated_track_hash in known_track_hashes:
-        return generated_track_hash
+        return generated_track_hash, track_name
     else:
-        return None
+        return None, None
 
 
 def search_for_known_hashes(
@@ -31,24 +34,31 @@ def search_for_known_hashes(
     known_track_hashes,
     output_file_name,
 ):
-    potential_track_names = generate_potential_track_names(
-        sec1_list,
-        sep1_list,
-        sec2_list,
-        sep2_list,
-        sec3_list,
-        sep3_list,
-        sec4_list,
-        sep4_list,
-        sec5_list,
+    start = time.time()
+
+    print("CPU count:", cpu_count())
+
+    pool = Pool(cpu_count())
+    hash_hits_iterator = pool.imap_unordered(
+        partial(check_hash, known_track_hashes),
+        generate_potential_track_names(
+            sec1_list,
+            sep1_list,
+            sec2_list,
+            sep2_list,
+            sec3_list,
+            sep3_list,
+            sec4_list,
+            sep4_list,
+            sec5_list,
+        ),
     )
 
-    start = time.time()
+    hash_hits = [x for x in hash_hits_iterator if x[0] is not None]
+
     re_found_hits = []
     new_hists = []
-    for potential_track_name in potential_track_names:
-        hash_hit = check_hash(potential_track_name, known_track_hashes)
-
+    for hash_hit, potential_track_name in hash_hits:
         if hash_hit is None:
             continue
 
@@ -66,7 +76,7 @@ def search_for_known_hashes(
     re_found_hits = list(set(re_found_hits))
     new_hists = list(set(new_hists))
 
-    print(f"Time taken: {(end - start)/ 3600:.2f} hours")
+    print(f"Time taken: {(end - start)} seconds")
 
     print(f"Re-found {len(re_found_hits)} known hits:")
     print(*sorted(re_found_hits), sep=", ")
