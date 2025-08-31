@@ -1,9 +1,11 @@
+import itertools
 from ffx_bones_unhash import BONES_MAP_NEW_PATH
 from lists.lists import separators, docs_track_names, extras
 from utils.diff_utils import get_extra_sections
 from utils.string_utils import (
     generate_potential_track_name_sections,
     generate_ordered_potential_track_name_sections,
+    get_capitalisation_variants,
 )
 from utils.file_utils import load_map, get_known_track_names
 from utils.hash_utils import search_for_known_hashes
@@ -39,12 +41,22 @@ if __name__ == "__main__":
         generate_ordered_potential_track_name_sections(known_track_names)
     )
 
-    bone_sections = get_extra_sections(known_track_names, known_bone_names)
+    bone_sections = list(
+        itertools.chain.from_iterable(
+            [
+                get_capitalisation_variants(section)
+                for section in get_extra_sections(known_track_names, known_bone_names)
+            ]
+        )
+    )
 
-    sec1_list += bone_sections
-    sec2_list += bone_sections
-    sec3_list += ["up"]
+    # sec1_list += bone_sections
+    # sec2_list += bone_sections
+    sec3_list += ["mid"]
     sec4_list += sec3_list
+    sec4_list = list(set(sec4_list))
+    sec5_list += sec4_list
+    sec5_list = list(set(sec5_list))
 
     search_for_known_hashes(
         sec1_list,
