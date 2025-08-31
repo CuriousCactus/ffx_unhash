@@ -52,7 +52,7 @@ def search_for_known_hashes(
 
     while checkpoint_start < len(sec1_list):
         print("----------------------------------------------------")
-        print(f"Checkpoint number: {checkpoint_start // checkpoint_size}/{checkpoint_number}")
+        print(f"Checkpoint number: {checkpoint_start // checkpoint_size + 1}/{checkpoint_number}")
 
         checkpoint_max = min(checkpoint_start + checkpoint_size, len(sec1_list))
         hash_hits_iterator = pool.imap_unordered(
