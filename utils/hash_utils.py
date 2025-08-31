@@ -58,7 +58,7 @@ def search_for_known_hashes(
         print("----------------------------------------------------")
         print(f"Checkpoint number: {checkpoint_index + 1}/{total_checkpoints}")
 
-        hash_hits_iterator = pool.imap_unordered(
+        hash_hits_iterator = map(
             partial(check_hash, known_track_hashes),
             generate_potential_track_names(
                 sec1_list[checkpoint_index : checkpoint_index + 1],

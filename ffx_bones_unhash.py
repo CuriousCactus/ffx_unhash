@@ -59,8 +59,8 @@ if __name__ == "__main__":
         generate_ordered_potential_track_name_sections(known_track_names)
     )
 
-    sec3_list += ["c", "chin", "jaw", "05", "06", "07", "08", "09"]
-    sec4_list += ["a", "b", "04", "05", "06", "07", "08", "09"]
+    # sec3_list += ["c", "chin", "jaw", "05", "06", "07", "08", "09"]
+    # sec4_list += ["a", "b", "04", "05", "06", "07", "08", "09"]
 
     search_for_known_hashes(
         sec1_list,

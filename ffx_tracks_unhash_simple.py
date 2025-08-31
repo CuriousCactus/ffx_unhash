@@ -9,6 +9,6 @@ if __name__ == "__main__":
 
     known_track_names, known_track_hashes = get_known_track_names(map_json)
 
-    result = check_hash(known_track_hashes, "brow_squeeze_bs")
+    result = check_hash(known_track_hashes, "brows_mid_dn_r")
 
     print(f"Result: {result}")

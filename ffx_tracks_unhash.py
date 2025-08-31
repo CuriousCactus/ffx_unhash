@@ -1,4 +1,6 @@
+from ffx_bones_unhash import BONES_MAP_NEW_PATH
 from lists.lists import separators, docs_track_names, extras
+from utils.diff_utils import get_extra_sections
 from utils.string_utils import (
     generate_potential_track_name_sections,
     generate_ordered_potential_track_name_sections,
@@ -13,9 +15,11 @@ TRACKS_MAP_NEW_PATH = os.path.join(
 )
 
 if __name__ == "__main__":
-    map_json = load_map(TRACKS_MAP_NEW_PATH)
+    tracks_map_json = load_map(TRACKS_MAP_NEW_PATH)
+    bones_map_json = load_map(BONES_MAP_NEW_PATH)
 
-    known_track_names, known_track_hashes = get_known_track_names(map_json)
+    known_track_names, known_track_hashes = get_known_track_names(tracks_map_json)
+    known_bone_names, known_bone_hashes = get_known_track_names(bones_map_json)
 
     # potential_track_name_sections = generate_potential_track_name_sections(
     #     known_track_names + docs_track_names, extras
@@ -34,6 +38,13 @@ if __name__ == "__main__":
     sec1_list, sec2_list, sec3_list, sec4_list, sec5_list = (
         generate_ordered_potential_track_name_sections(known_track_names)
     )
+
+    bone_sections = get_extra_sections(known_track_names, known_bone_names)
+
+    sec1_list += bone_sections
+    sec2_list += bone_sections
+    sec3_list += ["up"]
+    sec4_list += sec3_list
 
     search_for_known_hashes(
         sec1_list,
