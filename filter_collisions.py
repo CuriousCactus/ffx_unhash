@@ -16,8 +16,8 @@ def filter_collisions():
     bones_map_json = load_map(BONES_MAP_NEW_PATH)
     known_bone_names, _ = get_known_track_names(bones_map_json)
 
-    print_list(known_track_names, "known track names")
-    print_list(known_bone_names, "known bone names")
+    print_list(known_track_names, "Known track names")
+    print_list(known_bone_names, "Known bone names")
 
     potential_track_name_sections = generate_potential_track_name_sections(
         known_track_names + known_bone_names,
@@ -27,7 +27,7 @@ def filter_collisions():
 
     long_sections = list(filter(lambda x: len(x) > 2, potential_track_name_sections))
 
-    print_list(long_sections, "long sections")
+    print_list(long_sections, "Long sections")
 
     with open(COLLISIONS_PATH, "r", encoding="utf-8") as f:
         for line in f:

@@ -6,8 +6,9 @@ TIME_PER_CHECK = 832.7087953090668 / 318440176
 
 
 def print_list(list_to_print, list_name):
-    print(f"{len(list_to_print)} {list_name}:")
-    print(*sorted(list_to_print), sep=", ")
+    print(f"{list_name} (length {len(list_to_print)}):")
+    # print(*sorted(list_to_print), sep=", ")
+    print(sorted(list_to_print))
 
 
 def split_on_separator(known_track_name):
@@ -15,7 +16,7 @@ def split_on_separator(known_track_name):
 
 
 def split_on_camelcase(known_track_name):
-    sections = re.findall(r"[A-Z]?[a-z]+|[A-Z]+(?=[A-Z]|$)", known_track_name)
+    sections = re.findall(r"[A-Z]?[a-z0-9]+|[A-Z]+(?=[A-Z]|$)", known_track_name)
     if len(sections) <= 1:
         return [known_track_name]
     else:
@@ -69,13 +70,13 @@ def generate_potential_track_name_sections(
 
     potential_track_name_sections = list(set(potential_track_name_sections))
 
-    print_list(potential_track_name_sections, "potential sections")
+    print_list(potential_track_name_sections, "Potential sections")
 
     return potential_track_name_sections
 
 
 def generate_ordered_potential_track_name_sections(known_track_names):
-    sec1_list = [""]
+    sec1_list = []
     sec2_list = [""]
     sec3_list = [""]
     sec4_list = [""]
@@ -113,18 +114,6 @@ def generate_potential_track_names(
     sep4_list,
     sec5_list,
 ):
-    print(
-        "m",
-        sec1_list,
-        sep1_list,
-        sec2_list,
-        sep2_list,
-        sec3_list,
-        sep3_list,
-        sec4_list,
-        sep4_list,
-        sec5_list,
-    )
     potential_track_names = (
         f"{sec1}{sep1}{sec2}{sep2}{sec3}{sep3}{sec4}{sep4}{sec5}"
         for sec1, sep1, sec2, sep2, sec3, sep3, sec4, sep4, sec5 in itertools.product(

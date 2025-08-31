@@ -1,9 +1,8 @@
 from murmurhash import mrmr
 import time
 from utils.file_utils import write_track_name
-from utils.string_utils import generate_potential_track_names
+from utils.string_utils import generate_potential_track_names, print_list
 from multiprocessing import Pool, cpu_count
-import itertools
 from functools import partial
 
 SEED = 0x4EB23
@@ -36,29 +35,33 @@ def search_for_known_hashes(
 ):
     start = time.time()
 
+    print_list(sec1_list, "sec1_list")
+    print_list(sep1_list, "sep1_list")
+    print_list(sec2_list, "sec2_list")
+    print_list(sep2_list, "sep2_list")
+    print_list(sec3_list, "sec3_list")
+    print_list(sep3_list, "sep3_list")
+    print_list(sec4_list, "sec4_list")
+    print_list(sep4_list, "sep4_list")
+    print_list(sec5_list, "sec5_list")
+
     print("CPU count:", cpu_count())
     pool = Pool(cpu_count())
 
     re_found_hits = []
     new_hits = []
 
-    checkpoint_size = max(1, len(sec1_list) // 100)
+    total_checkpoints = len(sec1_list)
+    checkpoint_index = 0
 
-    checkpoint_number = len(sec1_list) // checkpoint_size
-    if len(sec1_list) % checkpoint_size != 0:
-        checkpoint_number += 1
-
-    checkpoint_start = 0
-
-    while checkpoint_start < len(sec1_list):
+    while checkpoint_index < total_checkpoints:
         print("----------------------------------------------------")
-        print(f"Checkpoint number: {checkpoint_start // checkpoint_size + 1}/{checkpoint_number}")
+        print(f"Checkpoint number: {checkpoint_index + 1}/{total_checkpoints}")
 
-        checkpoint_max = min(checkpoint_start + checkpoint_size, len(sec1_list))
         hash_hits_iterator = pool.imap_unordered(
             partial(check_hash, known_track_hashes),
             generate_potential_track_names(
-                sec1_list[checkpoint_start:checkpoint_max],
+                sec1_list[checkpoint_index : checkpoint_index + 1],
                 sep1_list,
                 sec2_list,
                 sep2_list,
@@ -85,7 +88,7 @@ def search_for_known_hashes(
                 new_hits.append(potential_track_name)
                 write_track_name(potential_track_name, hash_hit, output_file_name)
 
-        checkpoint_start += checkpoint_size
+        checkpoint_index += 1
 
     end = time.time()
 
@@ -94,15 +97,12 @@ def search_for_known_hashes(
 
     print(f"Time taken: {(end - start)} seconds")
 
-    print(f"Re-found {len(re_found_hits)} known hits:")
-    print(*sorted(re_found_hits), sep=", ")
+    print_list(re_found_hits, "Known hits")
 
     if len(re_found_hits) < len(known_track_names):
         print(
             f"Warning: Only re-found {len(re_found_hits)} of {len(known_track_names)} known track names!"
         )
-        print("Missing:")
-        print(*sorted(set(known_track_names) - set(re_found_hits)), sep=", ")
+        print_list(sorted(set(known_track_names) - set(re_found_hits)), "Missing")
 
-    print(f"Found {len(new_hits)} new hits:")
-    print(*sorted(new_hits), sep=", ")
+    print_list(new_hits, "New hits")

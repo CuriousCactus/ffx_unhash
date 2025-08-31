@@ -1,5 +1,5 @@
 import json
-import os
+from utils.string_utils import print_list
 
 
 def load_map(map_path):
@@ -23,7 +23,6 @@ def get_known_track_names(map_json):
         known_track_names.extend(value)
         known_track_hashes.append(int(key))
 
-    print(f"{len(known_track_names)} known track names:")
-    print(*sorted(known_track_names), sep=", ")
+    print_list(known_track_names, "Known track names")
 
     return known_track_names, known_track_hashes

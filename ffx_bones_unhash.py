@@ -6,7 +6,10 @@ from lists.lists import (
     numbers,
     extras_no_cap_variants,
 )
-from utils.string_utils import generate_potential_track_name_sections
+from utils.string_utils import (
+    generate_potential_track_name_sections,
+    generate_ordered_potential_track_name_sections,
+)
 from utils.file_utils import load_map, get_known_track_names
 from utils.hash_utils import search_for_known_hashes
 import os
@@ -21,36 +24,43 @@ if __name__ == "__main__":
 
     known_track_names, known_track_hashes = get_known_track_names(map_json)
 
-    potential_track_name_sections = generate_potential_track_name_sections(
-        known_track_names,
-        [],
-    )
+    # potential_track_name_sections = generate_potential_track_name_sections(
+    #     known_track_names,
+    #     [],
+    # )
 
-    potential_track_name_sections_no_numbers = list(
-        filter(
-            lambda x: x not in numbers_with_leading_zero + numbers,
-            potential_track_name_sections,
-        )
-    )
+    # potential_track_name_sections_no_numbers = list(
+    #     filter(
+    #         lambda x: x not in numbers_with_leading_zero + numbers,
+    #         potential_track_name_sections,
+    #     )
+    # )
 
-    potential_track_name_sections_short = list(
-        filter(lambda x: len(x) <= 2, potential_track_name_sections)
-    ) + ["driver"]
+    # potential_track_name_sections_short = list(
+    #     filter(lambda x: len(x) <= 2, potential_track_name_sections)
+    # ) + ["driver"]
 
-    sec1_list = potential_track_name_sections_no_numbers
+    # sec1_list = potential_track_name_sections_no_numbers
     sep1_list = ["", "_"]
-    sec2_list = potential_track_name_sections
+    # sec2_list = potential_track_name_sections
     sep2_list = ["", "_"]
-    sec3_list = potential_track_name_sections + [""]
+    # sec3_list = potential_track_name_sections + [""]
     sep3_list = ["", "_"]
-    sec4_list = (
-        list(range(4))
-        + numbers_with_leading_zero
-        + potential_track_name_sections_short
-        + [""]
+    # sec4_list = (
+    #     list(range(4))
+    #     + numbers_with_leading_zero
+    #     + potential_track_name_sections_short
+    #     + [""]
+    # )
+    sep4_list = ["", "_"]
+    # sec5_list = [""]
+
+    sec1_list, sec2_list, sec3_list, sec4_list, sec5_list = (
+        generate_ordered_potential_track_name_sections(known_track_names)
     )
-    sep4_list = [""]
-    sec5_list = [""]
+
+    sec3_list += ["c", "chin", "jaw", "05", "06", "07", "08", "09"]
+    sec4_list += ["a", "b", "04", "05", "06", "07", "08", "09"]
 
     search_for_known_hashes(
         sec1_list,
