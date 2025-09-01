@@ -47,21 +47,19 @@ docs_track_names = [
 ]
 
 extra_body_parts = [
-    "neck",
-    "brow",
-    # "shoulder",
-    "eye",
-    "nose",
-    "forehead",
-    "tongue",
-    "palate",
-    "jaw",
-    # "philtrum",
-    # "larynx",
-    "teeth",
-    "chin",
-    "lid",
     "bone",
+    "brows",
+    "eyes",
+    "eyelid",
+    "eyelids",
+    "forehead",
+    "larynx",
+    "lid",
+    "lids",
+    "neck",
+    "palate",
+    "teeth",
+    "temple",
 ]
 
 extra_directions = [
@@ -89,13 +87,43 @@ extra_directions = [
 ]
 
 extra_poses = [
-    "Frown",
-    "Smile",
-    "Surprise",
-    "Neutral",
+    "frown",
+    "smile",
+    "surprise",
+    "neutral",
     "wrinkle",
     "pout",
     "smirk",
+]
+
+extras_blender = [
+    "t",
+    "handle",
+    "end",
+    "ORG",
+    "org",
+    "MCH",
+    "mch",
+    "DEF",
+    "DEF".lower(),
+    "master",
+    "lock",
+    "top",
+    "offset",
+    "reparent",
+    "glue",
+    "common",
+    "arm",
+    "Dummy",
+    "dummy",
+    "Root",
+    "root",
+    "spine",
+    "neck",
+    "chest",
+    "scapula",
+    "lobe",
+    "helix",
 ]
 
 ipa = [

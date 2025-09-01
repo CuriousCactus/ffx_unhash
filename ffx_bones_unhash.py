@@ -5,6 +5,8 @@ from lists.lists import (
     numbers_with_leading_zero,
     numbers,
     extras_no_cap_variants,
+    extra_body_parts,
+    extras_blender,
 )
 from utils.string_utils import (
     generate_potential_track_name_sections,
@@ -24,10 +26,10 @@ if __name__ == "__main__":
 
     known_track_names, known_track_hashes = get_known_track_names(map_json)
 
-    # potential_track_name_sections = generate_potential_track_name_sections(
-    #     known_track_names,
-    #     [],
-    # )
+    potential_track_name_sections = generate_potential_track_name_sections(
+        known_track_names,
+        [],
+    )
 
     # potential_track_name_sections_no_numbers = list(
     #     filter(
@@ -59,8 +61,20 @@ if __name__ == "__main__":
         generate_ordered_potential_track_name_sections(known_track_names)
     )
 
-    # sec3_list += ["c", "chin", "jaw", "05", "06", "07", "08", "09"]
-    # sec4_list += ["a", "b", "04", "05", "06", "07", "08", "09"]
+    # sec4_list = list(set(sec3_list))
+    # sec1_list = list(set(sec1_list + sec2_list + extra_body_parts))
+    # sec2_list = sec1_list
+    # sec3_list = sec1_list
+
+    # sec5_list = list(
+    #     set(sec4_list + sec5_list + [sec + "_driver" for sec in sec4_list])
+    # )
+    # sec4_list = list(set(sec4_list))
+    # sec1_list = list(set(potential_track_name_sections))
+    # sec2_list = list(set(potential_track_name_sections))
+    # sec3_list = list(set(sec3_list))
+    sec1_list = ["piercing"]
+    sec2_list = ["helix", "lobe", "bridge", "nostril"]
 
     search_for_known_hashes(
         sec1_list,
