@@ -1,6 +1,12 @@
 import itertools
 from ffx_bones_unhash import BONES_MAP_NEW_PATH
-from lists.lists import separators, docs_track_names, extras
+from lists.lists import (
+    separators,
+    docs_track_names,
+    extras,
+    numbers,
+    numbers_with_leading_zero,
+)
 from utils.diff_utils import get_extra_sections
 from utils.string_utils import (
     generate_potential_track_name_sections,
@@ -23,8 +29,12 @@ if __name__ == "__main__":
     known_track_names, known_track_hashes = get_known_track_names(tracks_map_json)
     known_bone_names, known_bone_hashes = get_known_track_names(bones_map_json)
 
+    # potential_track_name_sections = generate_potential_track_name_sections(
+    #     known_track_names + docs_track_names, extras
+    # )
+
     potential_track_name_sections = generate_potential_track_name_sections(
-        known_track_names + docs_track_names, extras
+        known_track_names, []
     )
 
     # sec1_list = potential_track_name_sections
@@ -63,9 +73,12 @@ if __name__ == "__main__":
     # sec4_list = list(set(sec4_list))
     # sec5_list += sec4_list
     # sec5_list = list(set(sec5_list))
-    sec1_list = list(potential_track_name_sections)
-    sec2_list = list(set(sec2_list + tail_list + potential_track_name_sections))
-    sec3_list = list(set(sec3_list + tail_list_no_caps))
+    # sec1_list = potential_track_name_sections
+    # sec2_list = potential_track_name_sections
+    # sec3_list = potential_track_name_sections
+    # sec4_list = sec4_list + numbers + numbers_with_leading_zero
+    # sec5_list = sec5_list + numbers + numbers_with_leading_zero
+    sec3_list = list(set(sec3_list + potential_track_name_sections))
     sec4_list = list(set(sec4_list + tail_list_no_caps))
     sec5_list = list(
         set(tail_list_no_caps + [section + "_bs" for section in tail_list_no_caps])

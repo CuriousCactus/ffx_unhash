@@ -8,7 +8,12 @@ from functools import partial
 SEED = 0x4EB23
 
 
-def check_hash(known_track_hashes, track_name):
+def check_hash(known_track_hashes, only_long, track_name):
+    if len(track_name) < 16 and only_long:
+        return None, None
+    # elif only_long:
+    # print(track_name)
+
     generated_track_hash = (
         mrmr.hash64_py(track_name.encode(), seed=SEED) & 0xFFFFFFFFFFFFFFFF
     )
@@ -59,7 +64,7 @@ def search_for_known_hashes(
         print(f"Checkpoint number: {checkpoint_index + 1}/{total_checkpoints}")
 
         hash_hits_iterator = map(
-            partial(check_hash, known_track_hashes),
+            partial(check_hash, known_track_hashes, True),
             generate_potential_track_names(
                 sec1_list[checkpoint_index : checkpoint_index + 1],
                 sep1_list,

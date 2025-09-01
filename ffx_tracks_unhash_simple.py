@@ -10,7 +10,13 @@ if __name__ == "__main__":
     known_track_names, known_track_hashes = get_known_track_names(map_json)
 
     print([name for name in known_track_names if len(name) > 16])
+    f = sorted([name for name in known_track_names if "output" in name])
+    print(f)
+    h = [x.replace("_output", "") for x in f]
+    print(h)
+    g = sorted([name for name in known_track_names if name not in h + f])
+    print(g)
 
-    result = check_hash(known_track_hashes, "upperlip_rollout_bs")
+    result = check_hash(known_track_hashes, False, "Eye Pitch")
 
     print(f"Result: {result}")

@@ -34,11 +34,11 @@ if __name__ == "__main__":
     print_list(bones_diff, "In tracks but not in bones")
 
     for name in tracks_diff:
-        result = check_hash(known_track_hashes, name)
+        result = check_hash(known_track_hashes, False, name)
 
         print("tracks", name, result)
 
     for name in bones_diff:
-        result = check_hash(known_bone_hashes, name + "_driver")
+        result = check_hash(known_bone_hashes, False, name + "_driver")
 
         print("bones", name, result)
