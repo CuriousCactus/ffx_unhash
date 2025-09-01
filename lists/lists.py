@@ -2,7 +2,7 @@ import itertools
 from utils.string_utils import get_capitalisation_variants
 import string
 
-separators = ["", " ", "_", "-"]
+separators = ["", " ", "_"]
 
 docs_track_names = [
     "PBM",

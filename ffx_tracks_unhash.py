@@ -50,13 +50,26 @@ if __name__ == "__main__":
         )
     )
 
+    tail_list = sec2_list + sec3_list + sec4_list + sec5_list
+    tail_list = list(set(tail_list))
+    tail_list_no_caps = [item for item in tail_list if item.lower() == item]
+    tail_list_no_caps = list(set(tail_list_no_caps))
+
     # sec1_list += bone_sections
     # sec2_list += bone_sections
-    sec3_list += ["mid"]
-    sec4_list += sec3_list
-    sec4_list = list(set(sec4_list))
-    sec5_list += sec4_list
-    sec5_list = list(set(sec5_list))
+    # sec3_list += sec2_list
+    # sec3_list = list(set(sec3_list))
+    # sec4_list += sec3_list
+    # sec4_list = list(set(sec4_list))
+    # sec5_list += sec4_list
+    # sec5_list = list(set(sec5_list))
+    sec1_list = list(set(sec1_list))
+    sec2_list = list(set(sec2_list + tail_list + ["corner", "Corner"]))
+    sec3_list = list(set(sec3_list + tail_list_no_caps))
+    sec4_list = list(set(sec4_list + tail_list_no_caps))
+    sec5_list = list(
+        set(tail_list_no_caps + [section + "_bs" for section in tail_list_no_caps])
+    )
 
     search_for_known_hashes(
         sec1_list,

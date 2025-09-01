@@ -6,7 +6,7 @@ from ffx_bones_unhash import BONES_MAP_NEW_PATH
 from lists.lists import extras_cap_variants
 
 COLLISIONS_PATH = os.path.join(
-    os.path.dirname(__file__), "collisions/286965447607146401.cols"
+    os.path.dirname(__file__), "collisions\\5653735459566580575.cols"
 )
 
 
@@ -25,7 +25,7 @@ def filter_collisions():
         get_cap_variants=True,
     )
 
-    long_sections = list(filter(lambda x: len(x) > 2, potential_track_name_sections))
+    long_sections = list(filter(lambda x: len(x) > 3, potential_track_name_sections))
 
     print_list(long_sections, "Long sections")
 
@@ -37,14 +37,13 @@ def filter_collisions():
                 if section in line:
                     print(f"Hit found: {line}")
 
-            for section in long_sections:
-                if line.count(" ") == 4 or line.count("_") == 4:
-                    print(f"Hit found: {line}")
+            # for section in long_sections:
+            #     if line.count(" ") == 4 or line.count("_") == 4:
+            #         print(f"Hit found: {line}")
             # if sum(sub in line for sub in long_sections) >= 2:
             #     print(
             #         f"Hit found: {line}", [sub for sub in long_sections if sub in line]
             #     )
-            # print(line[-4:-1], line)
             # if line[-4:-1] == "_bs":
             #     print(f"Hit found: {line}")
             # if line[-3:-1] == "_r":
