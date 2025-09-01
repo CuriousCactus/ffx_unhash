@@ -23,9 +23,9 @@ if __name__ == "__main__":
     known_track_names, known_track_hashes = get_known_track_names(tracks_map_json)
     known_bone_names, known_bone_hashes = get_known_track_names(bones_map_json)
 
-    # potential_track_name_sections = generate_potential_track_name_sections(
-    #     known_track_names + docs_track_names, extras
-    # )
+    potential_track_name_sections = generate_potential_track_name_sections(
+        known_track_names + docs_track_names, extras
+    )
 
     # sec1_list = potential_track_name_sections
     sep1_list = separators
@@ -63,8 +63,8 @@ if __name__ == "__main__":
     # sec4_list = list(set(sec4_list))
     # sec5_list += sec4_list
     # sec5_list = list(set(sec5_list))
-    sec1_list = list(set(sec1_list))
-    sec2_list = list(set(sec2_list + tail_list + ["corner", "Corner"]))
+    sec1_list = list(potential_track_name_sections)
+    sec2_list = list(set(sec2_list + tail_list + potential_track_name_sections))
     sec3_list = list(set(sec3_list + tail_list_no_caps))
     sec4_list = list(set(sec4_list + tail_list_no_caps))
     sec5_list = list(

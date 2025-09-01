@@ -9,6 +9,8 @@ if __name__ == "__main__":
 
     known_track_names, known_track_hashes = get_known_track_names(map_json)
 
-    result = check_hash(known_track_hashes, "cornerClosed")
+    print([name for name in known_track_names if len(name) > 16])
+
+    result = check_hash(known_track_hashes, "upperlip_rollout_bs")
 
     print(f"Result: {result}")
