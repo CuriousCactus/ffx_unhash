@@ -6,7 +6,7 @@ from ffx_bones_unhash import BONES_MAP_NEW_PATH
 from lists.lists import extras_cap_variants
 
 COLLISIONS_PATH = os.path.join(
-    os.path.dirname(__file__), "collisions\\17054254757116529680.cols"
+    os.path.dirname(__file__), "collisions\\286965447607146401.cols"
 )
 
 
@@ -25,28 +25,31 @@ def filter_collisions():
         get_cap_variants=True,
     )
 
-    long_sections = list(filter(lambda x: len(x) > 2, potential_track_name_sections))
+    long_sections = list(filter(lambda x: len(x) > 4, potential_track_name_sections))
 
     print_list(long_sections, "Long sections")
 
     with open(COLLISIONS_PATH, "r", encoding="utf-8") as f:
         for line in f:
-            # if len(line) < 14:
-            #     print(f"Short line: {line}")
             for section in long_sections:
-                if (
-                    line.startswith(section)
-                    and line.count("_") > 1
-                    and line.count("__") == 0
-                ):
+                if section in line:
                     print(f"Hit found: {line}")
+            # if len(line) < 15:
+            #     print(f"Short line: {line}")
+            # for section in long_sections:
+            #     if (
+            #         line.startswith(section)
+            #         and line.count("_") > 1
+            #         and line.count("__") == 0
+            #     ):
+            #         print(f"Hit found: {line}")
 
             # for section in long_sections:
             #     if line.count(" ") == 4 or line.count("_") == 4:
             #         print(f"Hit found: {line}")
             # if sum(sub in line for sub in long_sections) >= 2:
             #     hits = [sub for sub in long_sections if sub in line]
-            #     if hits[0] not in hits[1] and hits[1] not in hits[0]:
+            #     if (hits[0] not in hits[1]) and (hits[1] not in hits[0]):
             #         print(f"Hit found: {line}", hits)
             # if line[-4:-1] == "_bs":
             #     print(f"Hit found: {line}")

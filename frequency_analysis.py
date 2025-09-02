@@ -37,18 +37,23 @@ if __name__ == "__main__":
 
     known_track_names, known_track_hashes = get_known_track_names(map_json)
 
-    unknowns = ["5653735459566580575", "17054254757116529680", "286965447607146401"]
+    unknowns = [
+        # "5653735459566580575",
+        "17054254757116529680",
+        "286965447607146401",
+    ]
 
     common_knowns = ["1380675382255544665", "1860960753336841273"]
 
-    outputs = analyse(unknowns)["5653735459566580575"]  # should end with _output
-    parents = analyse(common_knowns)["1380675382255544665"]
-    missing = list(set(parents) - set([x.replace("_output", "") for x in outputs]))
-    missing_outputs = [m + "_output" for m in missing]
-    print(missing)
-    print(missing_outputs)
-    for m in missing_outputs:
-        print(check_hash(known_track_hashes, False, m))
+    outputs = analyse(unknowns)
+    # ["5653735459566580575"]  # should end with _output
+    # parents = analyse(common_knowns)["1380675382255544665"]
+    # missing = list(set(parents) - set([x.replace("_output", "") for x in outputs]))
+    # missing_outputs = [m + "_output" for m in missing]
+    # print(missing)
+    # print(missing_outputs)
+    # for m in missing_outputs:
+    #     print(check_hash(known_track_hashes, False, m))
 
     # Should exist but don't
     # ['wide_output', 'rollin_output', 'rollout_output', 'upLipDn_output', 'lowLipUp_output', 'upFunnel_output', 'narrow_output']

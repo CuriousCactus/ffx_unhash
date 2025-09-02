@@ -64,21 +64,16 @@ def generate_potential_track_name_sections(
 
     for known_track_name in known_track_names:
         sections = split(known_track_name)
-        for section in sections:
-            if get_cap_variants:
-                capitalised_variants = get_capitalisation_variants(section)
-            else:
-                capitalised_variants = [section]
 
-            potential_track_name_sections.extend(capitalised_variants)
+        if get_cap_variants:
+            potential_track_name_sections.extend(get_capitalisation_variants(sections))
+        else:
+            potential_track_name_sections.extend(sections)
 
-        for extra in extras:
-            if get_extras_cap_variants:
-                extra_capitalised_variants = get_capitalisation_variants(extra)
-            else:
-                extra_capitalised_variants = [extra]
-
-            potential_track_name_sections.extend(extra_capitalised_variants)
+        if get_extras_cap_variants:
+            potential_track_name_sections.extend(get_capitalisation_variants(extras))
+        else:
+            potential_track_name_sections.extend(extras)
 
     potential_track_name_sections = list(set(potential_track_name_sections))
 
