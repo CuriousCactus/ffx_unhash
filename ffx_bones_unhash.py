@@ -47,14 +47,42 @@ if __name__ == "__main__":
         generate_ordered_potential_track_name_sections(known_track_names)
     )
 
-    sec6_list = sec5_list
-    sec5_list = sec4_list
-    sec1_list = sec1_list + get_lowercase(
-        extra_directions + extra_body_parts + extra_poses + extras_blender + extras_docs
-    )
-    sec2_list = sec2_list + get_lowercase(
-        extra_directions + extra_body_parts + extra_poses + extras_blender + extras_docs
-    )
+    # sec6_list = sec5_list
+    # sec5_list = sec4_list
+    sec1_list = ["lobe"]
+    sec2_list = sec2_list + [
+        "earlobe",
+        "mid",
+        "center",
+        "centre",
+        "bottom",
+        "b",
+        "a",
+        "c",
+        "cen",
+        "cn",
+        "ct",
+        "1",
+        "low",
+        "main",
+        "central",
+    ]
+    sec3_list = sec3_list + [
+        "earlobe",
+        "mid",
+        "center",
+        "centre",
+        "bottom",
+        "b",
+        "a",
+        "c",
+        "cen",
+        "cn",
+        "ct",
+        "1",
+        "low",
+        "main",
+    ]
     # sec3_list = sec3_list + get_lowercase(
     #     extra_directions + extra_body_parts + extra_poses + extras_blender + extras_docs
     # )

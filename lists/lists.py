@@ -82,6 +82,7 @@ extras_docs = [
 
 extra_body_parts = [
     "bone",
+    "bridge",
     "brows",
     "cheeks",
     "dimple",

@@ -57,9 +57,9 @@ if __name__ == "__main__":
         generate_ordered_potential_track_name_sections(known_track_names)
     )
 
-    sec1_list = sec1_list + get_capitalisation_variants(extra_poses)
-    sec2_list = sec2_list + get_capitalisation_variants(extra_poses)
-    sec3_list = sec3_list + get_capitalisation_variants(extra_poses)
+    sec1_list = sec1_list + ["Pucker"]
+    sec2_list = sec2_list + ["Pucker"]
+    sec3_list = sec3_list + ["Pucker"]
 
     # sec1_list += bone_sections
     # sec2_list += bone_sections

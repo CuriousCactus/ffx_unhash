@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     known_track_names, known_track_hashes = get_known_track_names(map_json)
 
-    name = "lips_sneer_l_bs_driver"
+    name = "piercing_lobe_a_l"
 
     result = check_hash(known_track_hashes, False, name)
 
