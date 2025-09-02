@@ -37,53 +37,27 @@ if __name__ == "__main__":
         [],
     )
 
-    # potential_track_name_sections_no_numbers = list(
-    #     filter(
-    #         lambda x: x not in numbers_with_leading_zero + numbers,
-    #         potential_track_name_sections,
-    #     )
-    # )
-
-    # potential_track_name_sections_short = list(
-    #     filter(lambda x: len(x) <= 2, potential_track_name_sections)
-    # ) + ["driver"]
-
-    # sec1_list = potential_track_name_sections_no_numbers
     sep1_list = ["", "_"]
-    # sec2_list = potential_track_name_sections
     sep2_list = ["", "_"]
-    # sec3_list = potential_track_name_sections + [""]
     sep3_list = ["", "_"]
-    # sec4_list = (
-    #     list(range(4))
-    #     + numbers_with_leading_zero
-    #     + potential_track_name_sections_short
-    #     + [""]
-    # )
     sep4_list = ["", "_"]
-    # sec5_list = [""]
+    sep5_list = ["", "_"]
 
-    sec1_list, sec2_list, sec3_list, sec4_list, sec5_list = (
+    sec1_list, sec2_list, sec3_list, sec4_list, sec5_list, sec6_list = (
         generate_ordered_potential_track_name_sections(known_track_names)
     )
 
-    # sec4_list = list(set(sec3_list))
-    # sec1_list = list(set(sec1_list + sec2_list + extra_body_parts))
-    # sec2_list = sec1_list
-    # sec3_list = sec1_list
-
-    # sec5_list = list(
-    #     set(sec4_list + sec5_list + [sec + "_driver" for sec in sec4_list])
-    # )
-    # sec4_list = list(set(sec4_list))
-    # sec1_list = list(set(potential_track_name_sections))
-    # sec2_list = list(set(potential_track_name_sections))
-    # sec3_list = list(set(sec3_list))
+    sec6_list = sec5_list
+    sec5_list = sec4_list
     sec1_list = sec1_list + get_lowercase(
         extra_directions + extra_body_parts + extra_poses + extras_blender + extras_docs
     )
-    sec2_list = sec2_list + get_lowercase(extras)
-    sec3_list = sec3_list + get_lowercase(extras)
+    sec2_list = sec2_list + get_lowercase(
+        extra_directions + extra_body_parts + extra_poses + extras_blender + extras_docs
+    )
+    # sec3_list = sec3_list + get_lowercase(
+    #     extra_directions + extra_body_parts + extra_poses + extras_blender + extras_docs
+    # )
 
     search_for_known_hashes(
         sec1_list,
@@ -95,6 +69,8 @@ if __name__ == "__main__":
         sec4_list,
         sep4_list,
         sec5_list,
+        sep5_list,
+        sec6_list,
         known_track_names,
         known_track_hashes,
         BONES_MAP_NEW_PATH,

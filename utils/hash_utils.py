@@ -34,6 +34,8 @@ def search_for_known_hashes(
     sec4_list,
     sep4_list,
     sec5_list,
+    sep5_list,
+    sec6_list,
     known_track_names,
     known_track_hashes,
     output_file_name,
@@ -46,6 +48,7 @@ def search_for_known_hashes(
     sec3_list = list(set(sec3_list))
     sec4_list = list(set(sec4_list))
     sec5_list = list(set(sec5_list))
+    sec6_list = list(set(sec6_list))
 
     print_list(sec1_list, "sec1_list")
     print_list(sep1_list, "sep1_list")
@@ -56,6 +59,8 @@ def search_for_known_hashes(
     print_list(sec4_list, "sec4_list")
     print_list(sep4_list, "sep4_list")
     print_list(sec5_list, "sec5_list")
+    print_list(sep5_list, "sep5_list")
+    print_list(sec6_list, "sec6_list")
 
     print("CPU count:", cpu_count())
     pool = Pool(cpu_count())
@@ -82,6 +87,8 @@ def search_for_known_hashes(
                 sec4_list,
                 sep4_list,
                 sec5_list,
+                sep5_list,
+                sec6_list,
             ),
         )
 

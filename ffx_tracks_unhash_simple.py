@@ -17,7 +17,7 @@ if __name__ == "__main__":
     g = sorted([name for name in known_track_names if name not in h + f])
     print(g)
 
-    name = "lowerlip_roll_in_bs"
+    name = "lipspucker_output"
 
     result = check_hash(known_track_hashes, False, name)
 

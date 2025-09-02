@@ -6,6 +6,7 @@ from lists.lists import (
     extras,
     numbers,
     numbers_with_leading_zero,
+    lower_case_letters,
     extras_docs,
     extra_body_parts,
     extra_directions,
@@ -43,23 +44,35 @@ if __name__ == "__main__":
     )
 
     # sec1_list = potential_track_name_sections
-    sep1_list = separators
+    sep1_list = ["", " "]
     # sec2_list = potential_track_name_sections
-    sep2_list = separators
+    sep2_list = ["", " "]
     # sec3_list = potential_track_name_sections
-    sep3_list = separators
+    sep3_list = ["", " "]
     # sec4_list = ["", "bs", "output"]
-    sep4_list = separators
-    sep5_list = separators
+    sep4_list = ["", " "]
     # sec5_list = [""]
 
-    sec1_list, sec2_list, sec3_list, sec4_list, sec5_list, sec6_list = (
+    sec1_list, sec2_list, sec3_list, sec4_list, sec5_list = (
         generate_ordered_potential_track_name_sections(known_track_names)
     )
 
-    sec1_list = sec1_list + get_capitalisation_variants(extra_poses)
-    sec2_list = sec2_list + get_capitalisation_variants(extra_poses)
-    sec3_list = sec3_list + get_capitalisation_variants(extra_poses)
+    sections = (
+        [""]
+        + get_capitalisation_variants(
+            potential_track_name_sections
+            + extra_directions
+            + extra_body_parts
+            + extra_poses
+            + extras_blender
+            + extras_docs
+        )
+        + [l.upper() for l in lower_case_letters]
+    )
+
+    sec1_list = sections
+    sec2_list = sections
+    sec3_list = sections
 
     # sec1_list += bone_sections
     # sec2_list += bone_sections
@@ -90,8 +103,6 @@ if __name__ == "__main__":
         sec4_list,
         sep4_list,
         sec5_list,
-        sep5_list,
-        sec6_list,
         known_track_names,
         known_track_hashes,
         TRACKS_MAP_NEW_PATH,

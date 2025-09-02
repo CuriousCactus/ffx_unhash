@@ -93,6 +93,8 @@ def generate_ordered_potential_track_name_sections(known_track_names):
     sec3_list = [""]
     sec4_list = [""]
     sec5_list = [""]
+    sec6_list = [""]
+
     for known_track_name in known_track_names:
         sections = split(known_track_name)
         if len(sections) > 0:
@@ -105,6 +107,8 @@ def generate_ordered_potential_track_name_sections(known_track_names):
             sec4_list.append(sections[3])
         if len(sections) > 4:
             sec5_list.append(sections[4])
+        if len(sections) > 5:
+            sec6_list.append(sections[5])
 
     return (
         list(set(sec1_list)),
@@ -112,6 +116,7 @@ def generate_ordered_potential_track_name_sections(known_track_names):
         list(set(sec3_list)),
         list(set(sec4_list)),
         list(set(sec5_list)),
+        list(set(sec6_list)),
     )
 
 
@@ -125,10 +130,12 @@ def generate_potential_track_names(
     sec4_list,
     sep4_list,
     sec5_list,
+    sep5_list,
+    sec6_list,
 ):
     potential_track_names = (
-        f"{sec1}{sep1}{sec2}{sep2}{sec3}{sep3}{sec4}{sep4}{sec5}"
-        for sec1, sep1, sec2, sep2, sec3, sep3, sec4, sep4, sec5 in itertools.product(
+        f"{sec1}{sep1}{sec2}{sep2}{sec3}{sep3}{sec4}{sep4}{sec5}{sep5}{sec6}"
+        for sec1, sep1, sec2, sep2, sec3, sep3, sec4, sep4, sec5, sep5, sec6, in itertools.product(
             sec1_list,
             sep1_list,
             sec2_list,
@@ -138,6 +145,8 @@ def generate_potential_track_names(
             sec4_list,
             sep4_list,
             sec5_list,
+            sep5_list,
+            sec6_list,
         )
     )
 
@@ -151,6 +160,8 @@ def generate_potential_track_names(
         * len(sec4_list)
         * len(sep4_list)
         * len(sec5_list)
+        * len(sep5_list)
+        * len(sec6_list)
     )
 
     print(f"Total combinations to check: {total_combinations}")

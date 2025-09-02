@@ -116,6 +116,7 @@ extra_directions = [
     "close",
     "closed",
     "down",
+    "edge",
     "forward",
     "fw",
     "high",
@@ -140,6 +141,8 @@ extra_poses = [
     "wrinkle",
     "pout",
     "smirk",
+    "pucker",
+    "shrug",
 ]
 
 extras_blender = [
