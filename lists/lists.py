@@ -46,44 +46,90 @@ docs_track_names = [
     "input",
 ]
 
+extras_docs = [
+    "anger",
+    "angry",
+    "brow",
+    "brows",
+    "ch",
+    "down",
+    "eye",
+    "eyes",
+    "happy",
+    "head",
+    "left",
+    "lids",
+    "look",
+    "mouth",
+    "neg",
+    "pain",
+    "pitch",
+    "pos",
+    "pose",
+    "pout",
+    "rest",
+    "right",
+    "roll",
+    "sad",
+    "sh",
+    "snarl",
+    "th",
+    "up",
+    "yaw",
+    "input",
+]
+
+
 extra_body_parts = [
     "bone",
     "brows",
+    "cheeks",
+    "dimple",
+    "dimples",
     "eyes",
     "eyelid",
     "eyelids",
+    "eyebrows",
+    "face",
     "forehead",
+    "helix",
     "larynx",
     "lid",
     "lids",
+    "lip",
+    "lobe",
     "neck",
     "palate",
     "teeth",
     "temple",
+    "wrinkles",
 ]
 
 extra_directions = [
-    "in",
-    "out",
-    "up",
-    "down",
-    "left",
-    "right",
-    "high",
-    "forward",
-    "fw",
-    "backward",
     "back",
+    "backward",
     "bk",
-    "raise",
-    "lower",
-    "lowerer",
-    "open",
+    "bottom",
+    "center",
+    "central",
+    "centre",
     "close",
     "closed",
-    "center",
-    "centre",
-    "central",
+    "down",
+    "forward",
+    "fw",
+    "high",
+    "in",
+    "left",
+    "lower",
+    "lowerer",
+    "mid",
+    "middle",
+    "open",
+    "out",
+    "raise",
+    "right",
+    "up",
 ]
 
 extra_poses = [
@@ -186,16 +232,14 @@ extras_no_cap_variants = (
     + extra_directions
     + extra_body_parts
     + extra_poses
-    # + numbers
-    # + numbers_with_leading_zero
-    # + lower_case_letters
+    + extras_docs
+    + extras_blender
+    + lower_case_letters
+    + numbers
+    + numbers_with_leading_zero
     # + ipa
 )
 
-extras_cap_variants = list(
-    itertools.chain.from_iterable(
-        get_capitalisation_variants(extra) for extra in extras_no_cap_variants
-    )
-)
+extras_cap_variants = get_capitalisation_variants(extras_no_cap_variants)
 
 extras = extras_cap_variants

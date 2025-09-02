@@ -37,8 +37,15 @@ def search_for_known_hashes(
     known_track_names,
     known_track_hashes,
     output_file_name,
+    only_long=False,
 ):
     start = time.time()
+
+    sec1_list = list(set(sec1_list))
+    sec2_list = list(set(sec2_list))
+    sec3_list = list(set(sec3_list))
+    sec4_list = list(set(sec4_list))
+    sec5_list = list(set(sec5_list))
 
     print_list(sec1_list, "sec1_list")
     print_list(sep1_list, "sep1_list")
@@ -64,7 +71,7 @@ def search_for_known_hashes(
         print(f"Checkpoint number: {checkpoint_index + 1}/{total_checkpoints}")
 
         hash_hits_iterator = map(
-            partial(check_hash, known_track_hashes, True),
+            partial(check_hash, known_track_hashes, only_long),
             generate_potential_track_names(
                 sec1_list[checkpoint_index : checkpoint_index + 1],
                 sep1_list,

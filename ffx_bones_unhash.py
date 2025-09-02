@@ -7,10 +7,16 @@ from lists.lists import (
     extras_no_cap_variants,
     extra_body_parts,
     extras_blender,
+    extras,
+    extra_directions,
+    extra_poses,
+    extras_docs,
 )
 from utils.string_utils import (
     generate_potential_track_name_sections,
     generate_ordered_potential_track_name_sections,
+    get_lowercase,
+    print_list,
 )
 from utils.file_utils import load_map, get_known_track_names
 from utils.hash_utils import search_for_known_hashes
@@ -73,8 +79,11 @@ if __name__ == "__main__":
     # sec1_list = list(set(potential_track_name_sections))
     # sec2_list = list(set(potential_track_name_sections))
     # sec3_list = list(set(sec3_list))
-    sec1_list = ["piercing"]
-    sec2_list = ["helix", "lobe", "bridge", "nostril"]
+    sec1_list = sec1_list + get_lowercase(
+        extra_directions + extra_body_parts + extra_poses + extras_blender + extras_docs
+    )
+    sec2_list = sec2_list + get_lowercase(extras)
+    sec3_list = sec3_list + get_lowercase(extras)
 
     search_for_known_hashes(
         sec1_list,

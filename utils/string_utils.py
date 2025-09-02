@@ -30,7 +30,7 @@ def split(known_track_name):
         return split_on_camelcase(known_track_name)
 
 
-def get_capitalisation_variants(known_track_name):
+def get_capitalisation_variants_single(known_track_name):
     lower = known_track_name.lower()
     upper = known_track_name.upper()
     title = known_track_name.title()
@@ -40,6 +40,18 @@ def get_capitalisation_variants(known_track_name):
         # upper,
         title,
     ]
+
+
+def get_capitalisation_variants(list_to_cap):
+    return list(
+        itertools.chain.from_iterable(
+            get_capitalisation_variants_single(extra) for extra in list_to_cap
+        )
+    )
+
+
+def get_lowercase(list_to_lower):
+    return [item.lower() for item in list_to_lower]
 
 
 def generate_potential_track_name_sections(

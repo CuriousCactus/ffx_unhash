@@ -17,6 +17,14 @@ if __name__ == "__main__":
     g = sorted([name for name in known_track_names if name not in h + f])
     print(g)
 
-    result = check_hash(known_track_hashes, False, "Eye Pitch")
+    name = "lowerlip_roll_in_bs"
 
-    print(f"Result: {result}")
+    result = check_hash(known_track_hashes, False, name)
+
+    print(f"Result for {name}: {result}")
+    if result[0] and name not in known_track_names:
+        print("TADA")
+    elif name in known_track_names:
+        print("Already known")
+    else:
+        print("Not a hit")

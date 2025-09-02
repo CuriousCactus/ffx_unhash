@@ -6,6 +6,11 @@ from lists.lists import (
     extras,
     numbers,
     numbers_with_leading_zero,
+    extras_docs,
+    extra_body_parts,
+    extra_directions,
+    extra_poses,
+    extras_blender,
 )
 from utils.diff_utils import get_extra_sections
 from utils.string_utils import (
@@ -51,19 +56,11 @@ if __name__ == "__main__":
         generate_ordered_potential_track_name_sections(known_track_names)
     )
 
-    bone_sections = list(
-        itertools.chain.from_iterable(
-            [
-                get_capitalisation_variants(section)
-                for section in get_extra_sections(known_track_names, known_bone_names)
-            ]
-        )
+    sec1_list = sec1_list + get_capitalisation_variants(
+        extra_directions + extra_body_parts + extra_poses + extras_blender + extras_docs
     )
-
-    tail_list = sec2_list + sec3_list + sec4_list + sec5_list
-    tail_list = list(set(tail_list))
-    tail_list_no_caps = [item for item in tail_list if item.lower() == item]
-    tail_list_no_caps = list(set(tail_list_no_caps))
+    sec2_list = sec2_list + get_capitalisation_variants(extras)
+    sec3_list = sec3_list + get_capitalisation_variants(extras)
 
     # sec1_list += bone_sections
     # sec2_list += bone_sections
@@ -78,11 +75,11 @@ if __name__ == "__main__":
     # sec3_list = potential_track_name_sections
     # sec4_list = sec4_list + numbers + numbers_with_leading_zero
     # sec5_list = sec5_list + numbers + numbers_with_leading_zero
-    sec3_list = list(set(sec3_list + potential_track_name_sections))
-    sec4_list = list(set(sec4_list + tail_list_no_caps))
-    sec5_list = list(
-        set(tail_list_no_caps + [section + "_bs" for section in tail_list_no_caps])
-    )
+    # sec3_list = list(set(sec3_list + potential_track_name_sections))
+    # sec4_list = list(set(sec4_list + tail_list_no_caps))
+    # sec5_list = list(
+    #     set(tail_list_no_caps + [section + "_bs" for section in tail_list_no_caps])
+    # )
 
     search_for_known_hashes(
         sec1_list,
