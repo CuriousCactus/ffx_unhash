@@ -84,7 +84,6 @@ if __name__ == "__main__":
             + extra_directions
             + extra_body_parts
             + extra_poses
-            + extras_docs
             + extras_blender,
         )
     )
@@ -95,7 +94,6 @@ if __name__ == "__main__":
             + extra_directions
             + extra_body_parts
             + extra_poses
-            + extras_docs
             + extras_blender,
         )
     ) + ["1", "01", "001"]
@@ -106,7 +104,6 @@ if __name__ == "__main__":
             + extra_directions
             + extra_body_parts
             + extra_poses
-            + extras_docs
             + extras_blender,
         )
     ) + ["1", "01", "001"]
