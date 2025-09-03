@@ -35,12 +35,11 @@ if __name__ == "__main__":
     known_track_names, known_track_hashes = get_known_track_names(tracks_map_json)
     known_bone_names, known_bone_hashes = get_known_track_names(bones_map_json)
 
-    # potential_track_name_sections = generate_potential_track_name_sections(
-    #     known_track_names + docs_track_names, extras
-    # )
-
     potential_track_name_sections = generate_potential_track_name_sections(
-        known_track_names, []
+        known_track_names,
+        [],
+        False,
+        False,
     )
 
     # sec1_list = potential_track_name_sections

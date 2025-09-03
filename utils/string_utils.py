@@ -1,14 +1,17 @@
 import re
 import time
 import itertools
+from utils.file_utils import write_log
 
 TIME_PER_CHECK = 832.7087953090668 / 318440176
 
 
-def print_list(list_to_print, list_name):
-    print(f"{list_name} (length {len(list_to_print)}):")
-    # print(*sorted(list_to_print), sep=", ")
+def print_list(list_to_print, list_name, log_file_name):
+    header = f"{list_name} (length {len(list_to_print)}):"
+    print(header)
+    write_log(log_file_name, header)
     print(sorted(list_to_print))
+    write_log(log_file_name, str(sorted(list_to_print)))
 
 
 def split_on_separator(known_track_name):
@@ -54,11 +57,24 @@ def get_lowercase(list_to_lower):
     return [item.lower() for item in list_to_lower]
 
 
+def get_known_track_names(map_json, log_file_name):
+    known_track_names = []
+    known_track_hashes = []
+    for key, value in map_json.items():
+        known_track_names.extend(value)
+        known_track_hashes.append(int(key))
+
+    print_list(known_track_names, "Known track names", log_file_name)
+
+    return known_track_names, known_track_hashes
+
+
 def generate_potential_track_name_sections(
     known_track_names,
     extras,
     get_cap_variants=False,
     get_extras_cap_variants=False,
+    log_file_name="",
 ):
     potential_track_name_sections = [""]
 
@@ -77,7 +93,7 @@ def generate_potential_track_name_sections(
 
     potential_track_name_sections = list(set(potential_track_name_sections))
 
-    print_list(potential_track_name_sections, "Potential sections")
+    print_list(potential_track_name_sections, "Potential sections", log_file_name)
 
     return potential_track_name_sections
 

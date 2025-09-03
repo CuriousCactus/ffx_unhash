@@ -1,5 +1,6 @@
 from murmurhash import mrmr
 import time
+import sys
 from utils.file_utils import write_track_name
 from utils.string_utils import generate_potential_track_names, print_list
 from multiprocessing import Pool, cpu_count
@@ -40,6 +41,7 @@ def search_for_known_hashes(
     known_track_hashes,
     output_file_name,
     only_long=False,
+    log_file_name="",
 ):
     start = time.time()
 
@@ -50,17 +52,17 @@ def search_for_known_hashes(
     sec5_list = list(set(sec5_list))
     sec6_list = list(set(sec6_list))
 
-    print_list(sec1_list, "sec1_list")
-    print_list(sep1_list, "sep1_list")
-    print_list(sec2_list, "sec2_list")
-    print_list(sep2_list, "sep2_list")
-    print_list(sec3_list, "sec3_list")
-    print_list(sep3_list, "sep3_list")
-    print_list(sec4_list, "sec4_list")
-    print_list(sep4_list, "sep4_list")
-    print_list(sec5_list, "sec5_list")
-    print_list(sep5_list, "sep5_list")
-    print_list(sec6_list, "sec6_list")
+    print_list(sec1_list, "sec1_list", log_file_name)
+    print_list(sep1_list, "sep1_list", log_file_name)
+    print_list(sec2_list, "sec2_list", log_file_name)
+    print_list(sep2_list, "sep2_list", log_file_name)
+    print_list(sec3_list, "sec3_list", log_file_name)
+    print_list(sep3_list, "sep3_list", log_file_name)
+    print_list(sec4_list, "sec4_list", log_file_name)
+    print_list(sep4_list, "sep4_list", log_file_name)
+    print_list(sec5_list, "sec5_list", log_file_name)
+    print_list(sep5_list, "sep5_list", log_file_name)
+    print_list(sec6_list, "sec6_list", log_file_name)
 
     print("CPU count:", cpu_count())
     pool = Pool(cpu_count())
@@ -116,12 +118,17 @@ def search_for_known_hashes(
 
     print(f"Time taken: {(end - start)} seconds")
 
-    print_list(re_found_hits, "Known hits")
+    print_list(re_found_hits, "Known hits", log_file_name)
 
     if len(re_found_hits) < len(known_track_names):
         print(
             f"Warning: Only re-found {len(re_found_hits)} of {len(known_track_names)} known track names!"
         )
-        print_list(sorted(set(known_track_names) - set(re_found_hits)), "Missing")
 
-    print_list(new_hits, "New hits")
+        print_list(
+            sorted(set(known_track_names) - set(re_found_hits)),
+            "Missing hits",
+            log_file_name,
+        )
+
+    print_list(new_hits, "New hits", log_file_name)
