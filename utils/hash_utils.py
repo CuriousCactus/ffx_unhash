@@ -1,13 +1,12 @@
 from murmurhash import mrmr
 import time
-import sys
 from utils.file_utils import write_track_name
 from utils.string_utils import generate_potential_track_names, print_list
-from multiprocessing import Pool, cpu_count, Process
-from functools import partial
+from multiprocessing import cpu_count, Process
+import datetime
 
 SEED = 0x4EB23
-TIME_PER_CHECK = 832.7087953090668 / 318440176
+TIME_PER_CHECK = 1150 / 507744000
 
 
 def split_list_into_chunks(lst, n):
@@ -48,11 +47,11 @@ def check_hashes(
             continue
 
         elif track_name in known_track_names:
-            # print(f"Known hit: {track_name} -> {hash_hit}")
+            print(f"Known hit: {track_name} -> {hash_hit}")
             re_found_hits.append(track_name)
 
         elif hash_hit is not None:
-            # print(f"New hit: {track_name} -> {hash_hit}")
+            print(f"New hit: {track_name} -> {hash_hit}")
             new_hits.append(track_name)
             write_track_name(track_name, hash_hit, output_file_name)
 
@@ -174,4 +173,4 @@ def search_for_known_hashes(
 
     end = time.time()
 
-    print(f"Time taken: {(end - start)} seconds")
+    print(f"Time taken: {datetime.timedelta(seconds=(end - start))}")

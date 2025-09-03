@@ -71,7 +71,8 @@ if __name__ == "__main__":
             # potential_track_name_sections,
             sec1_list
             # + extra_directions
-            + extra_body_parts + extra_poses,
+            + extra_body_parts,
+            # + extra_poses,
             # + extras_blender,
         )
     )
@@ -79,13 +80,14 @@ if __name__ == "__main__":
         filter(
             lambda x: re.match("^[a-z]+$", x),
             # potential_track_name_sections,
-            sec2_list + extra_directions,
-            # + extra_body_parts + extra_poses,
+            sec2_list
+            # + extra_directions
+            + extra_body_parts,
+            # + extra_poses,
             # + extras_blender,
         )
     ) + ["1", "01", "001"]
-    sec3_list = sec3_list
-    +extra_poses + ["bs_driver"]
+    sec3_list = sec3_list + extra_body_parts
     # sec4_list = ["bs_driver"]
     # sec5_list = [""]
     # sec6_list = [""]
