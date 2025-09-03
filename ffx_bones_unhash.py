@@ -69,8 +69,9 @@ if __name__ == "__main__":
         filter(
             lambda x: re.match("^[a-z]+$", x),
             # potential_track_name_sections,
-            sec1_list + extra_directions + extra_body_parts,
-            # + extra_poses,
+            sec1_list
+            # + extra_directions
+            + extra_body_parts + extra_poses,
             # + extras_blender,
         )
     )
@@ -78,72 +79,16 @@ if __name__ == "__main__":
         filter(
             lambda x: re.match("^[a-z]+$", x),
             # potential_track_name_sections,
-            sec2_list + extra_directions + extra_body_parts,
-            #   + extra_poses,
+            sec2_list + extra_directions,
+            # + extra_body_parts + extra_poses,
             # + extras_blender,
         )
     ) + ["1", "01", "001"]
-    # sec3_list = list(
-    #     filter(
-    #         lambda x: re.match("^[a-z]+$", x),
-    #         sec3_list + extra_directions + extra_body_parts,
-    #         # + extra_poses,
-    #         # + extras_blender,
-    #     )
-    # ) + ["1", "01", "001"]
-
-    # sec6_list = sec5_list
-    # sec5_list = sec4_list
-    # sec1_list = [
-    #     # "eyelid",
-    #     # "lid",
-    #     # "eye_lid",
-    #     # "eyelid_upper",
-    #     # "lid_upper",
-    #     # "eye_lid_upper",
-    #     # "uppereyelid",
-    #     # "upperlid",
-    #     # "upper_eyelid",
-    #     # "upper_eye_lid",
-    #     "lid1",
-    #     "eye_l",
-    # ]
-    # sec2_list = sec2_list + [
-    #     "earlobe",
-    #     "mid",
-    #     "center",
-    #     "centre",
-    #     "bottom",
-    #     "b",
-    #     "a",
-    #     "c",
-    #     "cen",
-    #     "cn",
-    #     "ct",
-    #     "1",
-    #     "low",
-    #     "main",
-    #     "central",
-    # ]
-    # sec3_list = sec3_list + [
-    #     "earlobe",
-    #     "mid",
-    #     "center",
-    #     "centre",
-    #     "bottom",
-    #     "b",
-    #     "a",
-    #     "c",
-    #     "cen",
-    #     "cn",
-    #     "ct",
-    #     "1",
-    #     "low",
-    #     "main",
-    # ]
-    # sec3_list = sec3_list + get_lowercase(
-    #     extra_directions + extra_body_parts + extra_poses + extras_blender + extras_docs
-    # )
+    sec3_list = sec3_list
+    +extra_poses + ["bs_driver"]
+    # sec4_list = ["bs_driver"]
+    # sec5_list = [""]
+    # sec6_list = [""]
 
     search_for_known_hashes(
         sec1_list,

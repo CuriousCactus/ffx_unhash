@@ -3,15 +3,13 @@ import time
 import itertools
 from utils.file_utils import write_log
 
-TIME_PER_CHECK = 832.7087953090668 / 318440176
-
 
 def print_list(list_to_print, list_name, log_file_name):
     header = f"{list_name} (length {len(list_to_print)}):"
     print(header)
-    write_log(log_file_name, header)
+    write_log(f"logs\{log_file_name}", header)
     print(sorted(list_to_print))
-    write_log(log_file_name, str(sorted(list_to_print)))
+    write_log(f"logs\{log_file_name}", str(sorted(list_to_print)))
 
 
 def split_on_separator(known_track_name):
@@ -160,25 +158,5 @@ def generate_potential_track_names(
             sec6_list,
         )
     )
-
-    total_combinations = (
-        len(sec1_list)
-        * len(sep1_list)
-        * len(sec2_list)
-        * len(sep2_list)
-        * len(sec3_list)
-        * len(sep3_list)
-        * len(sec4_list)
-        * len(sep4_list)
-        * len(sec5_list)
-        * len(sep5_list)
-        * len(sec6_list)
-    )
-
-    print(f"Total combinations to check: {total_combinations}")
-    print(
-        f"Estimated time to check all combinations: {total_combinations * TIME_PER_CHECK / 3600:.2f} hours"
-    )
-    print(f"Started at: {time.ctime()}")
 
     return potential_track_names
