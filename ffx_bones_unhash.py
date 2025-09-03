@@ -63,36 +63,34 @@ if __name__ == "__main__":
         )
     )
 
-    sec6_list = sec5_list
-    sec5_list = sec4_list
+    # sec6_list = sec5_list
+    # sec5_list = sec4_list
     sec1_list = list(
         filter(
             lambda x: re.match("^[a-z]+$", x),
-            potential_track_name_sections,
-            # sec1_list
-            # + extra_directions
-            # + extra_body_parts + extra_poses,
+            # potential_track_name_sections,
+            sec1_list + extra_directions + extra_body_parts,
+            # + extra_poses,
             # + extras_blender,
         )
     )
     sec2_list = list(
         filter(
             lambda x: re.match("^[a-z]+$", x),
-            potential_track_name_sections,
-            # sec2_list + extra_directions + extra_body_parts + extra_poses,
+            # potential_track_name_sections,
+            sec2_list + extra_directions + extra_body_parts,
+            #   + extra_poses,
             # + extras_blender,
         )
     ) + ["1", "01", "001"]
-    sec3_list = list(
-        filter(
-            lambda x: re.match("^[a-z]+$", x),
-            sec3_list,
-            # + extra_directions,
-            # + extra_body_parts
-            # + extra_poses,
-            # + extras_blender,
-        )
-    ) + ["1", "01", "001"]
+    # sec3_list = list(
+    #     filter(
+    #         lambda x: re.match("^[a-z]+$", x),
+    #         sec3_list + extra_directions + extra_body_parts,
+    #         # + extra_poses,
+    #         # + extras_blender,
+    #     )
+    # ) + ["1", "01", "001"]
 
     # sec6_list = sec5_list
     # sec5_list = sec4_list
