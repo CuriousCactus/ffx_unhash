@@ -1,17 +1,22 @@
-from murmurhash import mrmr
-import time
-from utils.file_utils import write_track_name
-from utils.string_utils import generate_potential_track_names, print_list
-from multiprocessing import cpu_count, Process
 import datetime
+import time
+from multiprocessing import Process, cpu_count
+
+from murmurhash import mrmr
+
+from utils.file_utils import write_track_name
+from utils.string_utils import (
+    generate_potential_track_names,
+    log_combinations,
+    print_list,
+)
 
 SEED = 0x4EB23
-TIME_PER_CHECK = 1150 / 507744000
 
 
-def split_list_into_chunks(lst, n):
-    k, m = divmod(len(lst), n)
-    return [lst[i * k + min(i, m) : (i + 1) * k + min(i + 1, m)] for i in range(n)]
+def split_list_into_chunks_of_length(lst, chunk_size):
+    """Split a list into chunks of specified length."""
+    return [lst[i : i + chunk_size] for i in range(0, len(lst), chunk_size)]
 
 
 def check_hash(known_track_hashes, only_long, track_name):
@@ -32,14 +37,36 @@ def check_hashes(
     known_track_hashes,
     known_track_names,
     only_long,
-    track_names,
+    sec1_list,
+    sep1_list,
+    sec2_list,
+    sep2_list,
+    sec3_list,
+    sep3_list,
+    sec4_list,
+    sep4_list,
+    sec5_list,
+    sep5_list,
+    sec6_list,
     output_file_name,
     log_file_name,
 ):
     re_found_hits = []
     new_hits = []
 
-    for track_name in track_names:
+    for track_name in generate_potential_track_names(
+        sec1_list,
+        sep1_list,
+        sec2_list,
+        sep2_list,
+        sec3_list,
+        sep3_list,
+        sec4_list,
+        sep4_list,
+        sec5_list,
+        sep5_list,
+        sec6_list,
+    ):
         result = check_hash(known_track_hashes, only_long, track_name)
         hash_hit = result[0]
 
@@ -94,12 +121,12 @@ def search_for_known_hashes(
 ):
     start = time.time()
 
-    sec1_list = list(set(sec1_list))
-    sec2_list = list(set(sec2_list))
-    sec3_list = list(set(sec3_list))
-    sec4_list = list(set(sec4_list))
-    sec5_list = list(set(sec5_list))
-    sec6_list = list(set(sec6_list))
+    sec1_list = sorted(list(set(sec1_list)))
+    sec2_list = sorted(list(set(sec2_list)))
+    sec3_list = sorted(list(set(sec3_list)))
+    sec4_list = sorted(list(set(sec4_list)))
+    sec5_list = sorted(list(set(sec5_list)))
+    sec6_list = sorted(list(set(sec6_list)))
 
     print_list(sec1_list, "sec1_list", log_file_name)
     print_list(sep1_list, "sep1_list", log_file_name)
@@ -113,63 +140,57 @@ def search_for_known_hashes(
     print_list(sep5_list, "sep5_list", log_file_name)
     print_list(sec6_list, "sec6_list", log_file_name)
 
-    total_combinations = (
-        len(sec1_list)
-        * len(sep1_list)
-        * len(sec2_list)
-        * len(sep2_list)
-        * len(sec3_list)
-        * len(sep3_list)
-        * len(sec4_list)
-        * len(sep4_list)
-        * len(sec5_list)
-        * len(sep5_list)
-        * len(sec6_list)
-    )
-
-    print(f"Total combinations to check: {total_combinations}")
-    print(
-        f"Estimated time to check all combinations: {total_combinations * TIME_PER_CHECK / 3600:.2f} hours"
-    )
     print(f"Started at: {time.ctime()}")
+
+    log_combinations(
+        sec1_list,
+        sep1_list,
+        sec2_list,
+        sep2_list,
+        sec3_list,
+        sep3_list,
+        sec4_list,
+        sep4_list,
+        sec5_list,
+        sep5_list,
+        sec6_list,
+    )
 
     print("CPU count:", cpu_count())
 
     worker_count = cpu_count()
     worker_pool = []
-    chunks = split_list_into_chunks(sec1_list, worker_count)
+    chunks = split_list_into_chunks_of_length(sec1_list, worker_count)
 
-    for i in range(worker_count):
-        p = Process(
-            target=check_hashes,
-            args=(
-                known_track_hashes,
-                known_track_names,
-                only_long,
-                list(
-                    generate_potential_track_names(
-                        chunks[i],
-                        sep1_list,
-                        sec2_list,
-                        sep2_list,
-                        sec3_list,
-                        sep3_list,
-                        sec4_list,
-                        sep4_list,
-                        sec5_list,
-                        sep5_list,
-                        sec6_list,
-                    )
+    for index, chunk in enumerate(chunks):
+        print(f"Checking chunk {index + 1} of {len(chunks)}: {chunk}")
+        for i in range(len(chunk)):
+            p = Process(
+                target=check_hashes,
+                args=(
+                    known_track_hashes,
+                    known_track_names,
+                    only_long,
+                    [chunk[i]],
+                    sep1_list,
+                    sec2_list,
+                    sep2_list,
+                    sec3_list,
+                    sep3_list,
+                    sec4_list,
+                    sep4_list,
+                    sec5_list,
+                    sep5_list,
+                    sec6_list,
+                    output_file_name,
+                    log_file_name,
                 ),
-                output_file_name,
-                log_file_name,
-            ),
-        )
-        p.start()
-        worker_pool.append(p)
+            )
+            p.start()
+            worker_pool.append(p)
 
-    for p in worker_pool:
-        p.join()
+        for p in worker_pool:
+            p.join()
 
     end = time.time()
 

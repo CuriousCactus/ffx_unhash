@@ -1,4 +1,5 @@
 import json
+import os
 
 
 def load_map(map_path):
@@ -8,6 +9,8 @@ def load_map(map_path):
 
 
 def write_log(log_file_name, message):
+    # Ensure the directory exists before writing
+    os.makedirs(os.path.dirname(log_file_name), exist_ok=True)
     with open(log_file_name, "a+", encoding="utf-8") as f:
         f.write(message + "\n")
 
