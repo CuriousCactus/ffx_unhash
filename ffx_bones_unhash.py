@@ -66,6 +66,9 @@ if __name__ == "__main__":
                 # lambda x: x,
                 lambda x: len(x) > 2,
                 potential_track_name_sections,
+                # + extra_body_parts
+                # + extra_directions
+                # + extra_poses,
                 # get_capitalisation_variants(potential_track_name_sections),
                 # sec1_list
                 # + extra_directions
@@ -84,7 +87,10 @@ if __name__ == "__main__":
                 filter(
                     lambda x: x,
                     #   re.search("[A-Z]", x) and len(x) > 2,
-                    potential_track_name_sections,
+                    potential_track_name_sections
+                    + extra_body_parts
+                    + extra_directions
+                    + extra_poses,
                     # sec1_list
                     # + extra_directions
                     # + extra_body_parts,
