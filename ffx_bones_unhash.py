@@ -58,82 +58,90 @@ if __name__ == "__main__":
 
     # sec6_list = sec5_list
     # sec5_list = sec4_list
-    sec1_list = list(
-        map(
-            lambda y: y.title(),
-            #     # extra_body_parts,
-            filter(
-                # lambda x: x,
-                lambda x: len(x) > 2,
-                potential_track_name_sections,
-                # + extra_body_parts
-                # + extra_directions
-                # + extra_poses,
-                # get_capitalisation_variants(potential_track_name_sections),
-                # sec1_list
-                # + extra_directions
-                # + extra_body_parts,
-                # + extra_poses,
-                # + extras_blender,
-            ),
-        )
-    )
-    # )
-    sec2_list = (
-        list(
-            map(
-                lambda y: y.title(),
-                # sec2_list,
-                filter(
-                    lambda x: x,
-                    #   re.search("[A-Z]", x) and len(x) > 2,
-                    potential_track_name_sections
-                    + extra_body_parts
-                    + extra_directions
-                    + extra_poses,
-                    # sec1_list
-                    # + extra_directions
-                    # + extra_body_parts,
-                    # + extra_poses,
-                    # + extras_blender,
-                    # ),
-                ),
-            )
-        )
-        # get_capitalisation_variants(potential_track_name_sections)
-        + numbers_with_leading_zero
-        + ["", "s", "L", "M", "R", "5", "05", "1"]
-    )
-    # list(
-    #     filter(
-    #         lambda x: re.match("^[a-z]+$", x),
-    #         # potential_track_name_sections,
-    #         sec2_list + extra_directions + extra_body_parts + extra_poses,
-    #         # + extras_blender,
+    # sec1_list = list(
+    #     map(
+    #         lambda y: y.title(),
+    #         #     # extra_body_parts,
+    #         filter(
+    #             # lambda x: x,
+    #             lambda x: len(x) > 2,
+    #             potential_track_name_sections,
+    #             # + extra_body_parts
+    #             # + extra_directions
+    #             # + extra_poses,
+    #             # get_capitalisation_variants(potential_track_name_sections),
+    #             # sec1_list
+    #             # + extra_directions
+    #             # + extra_body_parts,
+    #             # + extra_poses,
+    #             # + extras_blender,
+    #         ),
     #     )
-    # ) + ["1", "01", "001"]
-    # sec3_list = sec3_list + extra_body_parts
-    sec3_list = list(filter(lambda x: re.search("[A-Z]", x), sec3_list)) + [
-        "",
-        "s",
-        "L",
-        "M",
-        "R",
-        "5",
-        "05",
-        "1",
-        "BS",
-    ]
-    #     list(map(lambda y: get_capitalisation_variants(y), sec3_list))
-    #     # + numbers_with_leading_zero
+    # )
+    # # )
+    # sec2_list = (
+    #     list(
+    #         map(
+    #             lambda y: y.title(),
+    #             # sec2_list,
+    #             filter(
+    #                 lambda x: x,
+    #                 #   re.search("[A-Z]", x) and len(x) > 2,
+    #                 potential_track_name_sections
+    #                 + extra_body_parts
+    #                 + extra_directions
+    #                 + extra_poses,
+    #                 # sec1_list
+    #                 # + extra_directions
+    #                 # + extra_body_parts,
+    #                 # + extra_poses,
+    #                 # + extras_blender,
+    #                 # ),
+    #             ),
+    #         )
+    #     )
+    #     # get_capitalisation_variants(potential_track_name_sections)
+    #     + numbers_with_leading_zero
     #     + ["", "s", "L", "M", "R", "5", "05", "1"]
     # )
-    # sec4_list = (
-    #     list(map(lambda y: y.title(), sec3_list)) + numbers_with_leading_zero + ["s"]
-    # )
-    sec4_list = sec3_list + ["BS", "Driver"]
-    sec5_list = [""] + ["BS", "Driver"]
-    sec6_list = [""] + ["BS", "Driver"]
+    # # list(
+    # #     filter(
+    # #         lambda x: re.match("^[a-z]+$", x),
+    # #         # potential_track_name_sections,
+    # #         sec2_list + extra_directions + extra_body_parts + extra_poses,
+    # #         # + extras_blender,
+    # #     )
+    # # ) + ["1", "01", "001"]
+    # # sec3_list = sec3_list + extra_body_parts
+    # sec3_list = list(filter(lambda x: re.search("[A-Z]", x), sec3_list)) + [
+    #     "",
+    #     "s",
+    #     "L",
+    #     "M",
+    #     "R",
+    #     "5",
+    #     "05",
+    #     "1",
+    #     "BS",
+    # ]
+    # #     list(map(lambda y: get_capitalisation_variants(y), sec3_list))
+    # #     # + numbers_with_leading_zero
+    # #     + ["", "s", "L", "M", "R", "5", "05", "1"]
+    # # )
+    # # sec4_list = (
+    # #     list(map(lambda y: y.title(), sec3_list)) + numbers_with_leading_zero + ["s"]
+    # # )
+    # sec4_list = sec3_list + ["BS", "Driver"]
+    # sec5_list = [""] + ["BS", "Driver"]
+    # sec6_list = [""] + ["BS", "Driver"]
+    # sec1_list = ["lobe", "Lobe", "lobes", "Lobes"]
+    sec2_list = get_capitalisation_variants(
+        ["frontal", "dorsal", "ventral", "lateral", "medial", "rear", "posterior"]
+    )
+    # sec3_list = sec3_list + numbers_with_leading_zero
+    # sec4_list = sec4_list + numbers_with_leading_zero
+    # sec5_list = sec5_list + ["Orbit", "orbit"]
+    # sec6_list = sec6_list + ["Orbit", "orbit"]
 
     search_for_known_hashes(
         sec1_list,

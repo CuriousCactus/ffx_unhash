@@ -1,6 +1,7 @@
 import itertools
-from utils.string_utils import get_capitalisation_variants
 import string
+
+from utils.string_utils import get_capitalisation_variants
 
 separators = ["", " ", "_"]
 
@@ -97,6 +98,8 @@ extra_body_parts = [
     "nasal",
     "neck",
     "nose",
+    "orbit",
+    "orbits",
     "orbital",
     "palate",
     "piercing",
@@ -126,20 +129,24 @@ extra_directions = [
     "close",
     "closed",
     "curl",
+    "dorsal",
     "down",
     "edge",
     "end",
     "forward",
+    "frontal",
     "fw",
     "high",
     "in",
     "inner",
     "input",
+    "lateral",
     "left",
     "low",
     "lower",
     "lowerer",
     "main",
+    "medial",
     "mid",
     "middle",
     "narrow",
@@ -149,8 +156,10 @@ extra_directions = [
     "output",
     "pitch",
     "pos",
+    "posterior",
     "press",
     "raise",
+    "rear",
     "right",
     "roll",
     "t",
@@ -158,6 +167,7 @@ extra_directions = [
     "top",
     "twist",
     "up",
+    "ventral",
     "wing",
     "yaw",
 ]

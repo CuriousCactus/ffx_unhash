@@ -7,11 +7,14 @@ from utils.file_utils import write_log
 TIME_PER_CHECK = 1150 / 507744000
 
 
-def print_list(list_to_print, list_name, log_file_name):
+def print_list(list_to_print, list_name, log_file_name, separator=None):
     header = f"{list_name} (length {len(list_to_print)}):"
     print(header)
     write_log(os.path.join("logs", log_file_name), header)
-    print(sorted(list_to_print))
+    if separator is None:
+        print(sorted(list_to_print))
+    else:
+        print(*sorted(list_to_print), sep=separator)
     write_log(os.path.join("logs", log_file_name), str(sorted(list_to_print)))
 
 
