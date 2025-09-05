@@ -1,15 +1,54 @@
-import re
-import time
 import itertools
+import os
+import re
+
 from utils.file_utils import write_log
 
+TIME_PER_CHECK = 1150 / 507744000
 
-def print_list(list_to_print, list_name, log_file_name="log.log"):
+
+def print_list(list_to_print, list_name, log_file_name="log.log", separator=None):
     header = f"{list_name} (length {len(list_to_print)}):"
     print(header)
-    write_log(f"logs\{log_file_name}", header)
-    print(sorted(list_to_print))
-    write_log(f"logs\{log_file_name}", str(sorted(list_to_print)))
+    write_log(os.path.join("logs", log_file_name), header)
+    if separator is None:
+        print(sorted(list_to_print))
+    else:
+        print(*sorted(list_to_print), sep=separator)
+    write_log(os.path.join("logs", log_file_name), str(sorted(list_to_print)))
+
+
+def log_combinations(
+    sec1_list,
+    sep1_list,
+    sec2_list,
+    sep2_list,
+    sec3_list,
+    sep3_list,
+    sec4_list,
+    sep4_list,
+    sec5_list,
+    sep5_list,
+    sec6_list,
+):
+    total_combinations = (
+        len(sec1_list)
+        * len(sep1_list)
+        * len(sec2_list)
+        * len(sep2_list)
+        * len(sec3_list)
+        * len(sep3_list)
+        * len(sec4_list)
+        * len(sep4_list)
+        * len(sec5_list)
+        * len(sep5_list)
+        * len(sec6_list)
+    )
+
+    print(f"Total combinations to check: {total_combinations}")
+    print(
+        f"Estimated time to check all combinations: {total_combinations * TIME_PER_CHECK / 3600:.2f} hours"
+    )
 
 
 def split_on_separator(known_track_name):
@@ -33,7 +72,7 @@ def split(known_track_name):
 
 def get_capitalisation_variants_single(known_track_name):
     lower = known_track_name.lower()
-    upper = known_track_name.upper()
+    # upper = known_track_name.upper()
     title = known_track_name.title()
 
     return [
@@ -130,18 +169,20 @@ def generate_ordered_potential_track_name_sections(known_track_names):
 
 
 def generate_potential_track_names(
-    sec1_list,
-    sep1_list,
-    sec2_list,
-    sep2_list,
-    sec3_list,
-    sep3_list,
-    sec4_list,
-    sep4_list,
-    sec5_list,
-    sep5_list,
-    sec6_list,
+    sec1_list: list[str],
+    sep1_list: list[str],
+    sec2_list: list[str],
+    sep2_list: list[str],
+    sec3_list: list[str],
+    sep3_list: list[str],
+    sec4_list: list[str],
+    sep4_list: list[str],
+    sec5_list: list[str],
+    sep5_list: list[str],
+    sec6_list: list[str],
 ):
+    print(f"Checking {sec1_list[0]}")
+
     potential_track_names = (
         f"{sec1}{sep1}{sec2}{sep2}{sec3}{sep3}{sec4}{sep4}{sec5}{sep5}{sec6}"
         for sec1, sep1, sec2, sep2, sec3, sep3, sec4, sep4, sec5, sep5, sec6, in itertools.product(

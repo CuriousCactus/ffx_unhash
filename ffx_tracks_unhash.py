@@ -1,28 +1,28 @@
-import itertools
 import datetime
+import itertools
+import os
+import re
+
 from ffx_bones_unhash import BONES_MAP_NEW_PATH
-from lists.lists import (
-    # separators,
+from lists.lists import (  # separators,
     docs_track_names,
-    extras,
-    numbers,
-    numbers_with_leading_zero,
     extra_body_parts,
     extra_directions,
     extra_poses,
+    extras,
     extras_blender,
+    numbers,
+    numbers_with_leading_zero,
 )
 from utils.diff_utils import get_extra_sections
-from utils.string_utils import (
-    get_known_track_names,
-    generate_potential_track_name_sections,
-    generate_ordered_potential_track_name_sections,
-    get_capitalisation_variants,
-)
 from utils.file_utils import load_map
 from utils.hash_utils import search_for_known_hashes
-import os
-import re
+from utils.string_utils import (
+    generate_ordered_potential_track_name_sections,
+    generate_potential_track_name_sections,
+    get_capitalisation_variants,
+    get_known_track_names,
+)
 
 TRACKS_MAP_NEW_PATH = os.path.join(
     os.path.dirname(__file__), "maps/tracks_map_new.json"
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     bones_map_json = load_map(BONES_MAP_NEW_PATH)
 
     log_file_name = (
-        f"{str(datetime.datetime.now()).replace(" ", "-").replace(":","-")}.log"
+        f'{str(datetime.datetime.now()).replace(" ", "-").replace(":","-")}.log'
     )
 
     known_track_names, known_track_hashes = get_known_track_names(
