@@ -77,9 +77,9 @@ if __name__ == "__main__":
     # sec4_list = map_to_title(sec4_list) + [""]
     # sec5_list = map_to_title(sec5_list) + [""]
     # sec6_list = map_to_title(sec6_list) + [""]
-    sec1_list = ["Trunk", "Jugal"]
-    sec2_list = numbers_with_leading_zero
-    # sec3_list = numbers_with_leading_zero
+    sec1_list = ["jugal", "Jugal"]
+    sec2_list = ["l", "r", "L", "R"]
+    sec3_list = numbers_with_leading_zero
     # sec3_list = ["FR", "FL", "BR", "BL"]
 
     search_for_known_hashes(
