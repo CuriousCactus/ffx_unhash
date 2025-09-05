@@ -7,7 +7,7 @@ def load_map(map_path):
     return map_json
 
 
-def write_log(log_file_name, message):
+def write_log(log_file_name="log.log", message=""):
     with open(log_file_name, "a+", encoding="utf-8") as f:
         f.write(message + "\n")
 

@@ -4,7 +4,7 @@ import itertools
 from utils.file_utils import write_log
 
 
-def print_list(list_to_print, list_name, log_file_name):
+def print_list(list_to_print, list_name, log_file_name="log.log"):
     header = f"{list_name} (length {len(list_to_print)}):"
     print(header)
     write_log(f"logs\{log_file_name}", header)
