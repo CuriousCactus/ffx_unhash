@@ -201,3 +201,27 @@ def generate_potential_track_names(
     )
 
     return potential_track_names
+
+
+def filter_lowercase_only(strings: list[str]) -> list[str]:
+    return [s for s in strings if s.islower()]
+
+
+def filter_contains_lowercase(strings: list[str]) -> list[str]:
+    return [s for s in strings if any(c.islower() for c in s)]
+
+
+def filter_no_lowercase(strings: list[str]) -> list[str]:
+    return [s for s in strings if not any(c.islower() for c in s)]
+
+
+def filter_no_uppercase(strings: list[str]) -> list[str]:
+    return [s for s in strings if not any(c.isupper() for c in s)]
+
+
+def filter_no_numbers(strings: list[str]) -> list[str]:
+    return [s for s in strings if not any(c.isdigit() for c in s)]
+
+
+def map_to_title(strings: list[str]) -> list[str]:
+    return [s.title() for s in strings]

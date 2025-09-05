@@ -16,7 +16,7 @@ if __name__ == "__main__":
         map_json, "message.log"
     )
 
-    name = "Eye_Orbit_L"
+    name = "Tentacle_04_FR"
 
     result = check_hash(known_track_hashes, False, name)
 
