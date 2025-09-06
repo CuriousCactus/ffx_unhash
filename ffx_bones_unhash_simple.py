@@ -17,7 +17,7 @@ if __name__ == "__main__":
         map_json, "message.log"
     )
 
-    potential_track_names = blender_bones + ["NoseToLip_M"]
+    potential_track_names = blender_bones + ["Head_Spike0_R"]
 
     for name in potential_track_names:
         result = check_hash(known_track_hashes, False, name)

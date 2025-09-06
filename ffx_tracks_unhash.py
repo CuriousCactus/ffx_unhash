@@ -58,7 +58,7 @@ if __name__ == "__main__":
         log_file_name,
     )
 
-    separators = ["", "_"]
+    separators = ["", "_", " "]
 
     # sec1_list = potential_track_name_sections
     sep1_list = separators
@@ -72,41 +72,43 @@ if __name__ == "__main__":
     # sec5_list = [""]
 
     sec1_list, sec2_list, sec3_list, sec4_list, sec5_list, sec6_list = (
-        generate_ordered_potential_track_name_sections(known_track_names)
+        generate_ordered_potential_track_name_sections(
+            known_track_names + known_bone_names
+        )
     )
 
-    sec6_list = sec5_list
-    sec5_list = sec4_list
-    sec1_list = list(
-        filter(
-            lambda x: re.match("^[a-z]+$", x),
-            potential_track_name_sections
-            + extra_directions
-            + extra_body_parts
-            + extra_poses
-            + extras_blender,
-        )
-    )
-    sec2_list = list(
-        filter(
-            lambda x: re.match("^[a-z]+$", x),
-            potential_track_name_sections
-            + extra_directions
-            + extra_body_parts
-            + extra_poses
-            + extras_blender,
-        )
-    ) + ["1", "01", "001"]
-    sec3_list = list(
-        filter(
-            lambda x: re.match("^[a-z]+$", x),
-            sec3_list
-            + extra_directions
-            + extra_body_parts
-            + extra_poses
-            + extras_blender,
-        )
-    ) + ["1", "01", "001"]
+    # sec6_list = sec5_list
+    # sec5_list = sec4_list
+    # sec1_list = list(
+    #     filter(
+    #         lambda x: re.match("^[a-z]+$", x),
+    #         potential_track_name_sections
+    #         + extra_directions
+    #         + extra_body_parts
+    #         + extra_poses
+    #         + extras_blender,
+    #     )
+    # )
+    # sec2_list = list(
+    #     filter(
+    #         lambda x: re.match("^[a-z]+$", x),
+    #         potential_track_name_sections
+    #         + extra_directions
+    #         + extra_body_parts
+    #         + extra_poses
+    #         + extras_blender,
+    #     )
+    # ) + ["1", "01", "001"]
+    # sec3_list = list(
+    #     filter(
+    #         lambda x: re.match("^[a-z]+$", x),
+    #         sec3_list
+    #         + extra_directions
+    #         + extra_body_parts
+    #         + extra_poses
+    #         + extras_blender,
+    #     )
+    # ) + ["1", "01", "001"]
 
     # sec1_list += bone_sections
     # sec2_list += bone_sections
