@@ -9,6 +9,7 @@ from utils.file_utils import load_map, write_track_name
 from utils.hash_utils import check_hash
 from ffx_bones_unhash import BONES_MAP_NEW_PATH
 from lists.blender_bones import blender_bones
+from lists.blender_error_bones import blender_error_bones
 
 if __name__ == "__main__":
     map_json = load_map(BONES_MAP_NEW_PATH)
@@ -17,7 +18,7 @@ if __name__ == "__main__":
         map_json, "message.log"
     )
 
-    potential_track_names = blender_bones + ["Head_Spike0_R"]
+    potential_track_names = blender_bones + blender_error_bones + ["Jaw_R_0"]
 
     for name in potential_track_names:
         result = check_hash(known_track_hashes, False, name)
