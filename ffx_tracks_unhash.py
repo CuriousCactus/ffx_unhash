@@ -77,6 +77,34 @@ if __name__ == "__main__":
         )
     )
 
+    sec1_list = (
+        sec1_list
+        + [
+            "tentacle",
+            "Tentacle",
+            "tentacles",
+            "Tentacles",
+            "muzzle",
+            "Muzzle",
+            "jugal",
+            "Jugal",
+            "suck",
+            "Suck",
+        ]
+        + extras
+    )
+    sec2_list = sec2_list + [
+        "tentacle",
+        "Tentacle",
+        "tentacles",
+        "Tentacles",
+        "muzzle",
+        "Muzzle",
+        "jugal",
+        "Jugal",
+        "suck",
+        "Suck",
+    ]
     # sec6_list = sec5_list
     # sec5_list = sec4_list
     # sec1_list = list(
