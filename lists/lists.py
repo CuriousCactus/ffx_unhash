@@ -380,10 +380,10 @@ extras_no_cap_variants = (
     + extra_directions
     + extra_body_parts
     + extra_poses
-    + extras_blender
-    + lower_case_letters
-    + numbers
-    + numbers_with_leading_zero
+    # + extras_blender
+    # + lower_case_letters
+    # + numbers
+    # + numbers_with_leading_zero
     # + ipa
 )
 
