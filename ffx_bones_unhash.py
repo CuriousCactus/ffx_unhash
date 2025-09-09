@@ -7,7 +7,10 @@ from lists.lists import (
     extra_directions,
     extra_poses,
     numbers_with_leading_zero,
+    numbers,
+    extras
 )
+from lists.blender_docs import blender_docs_words
 from utils.file_utils import load_map
 from utils.hash_utils import search_for_known_hashes
 from utils.string_utils import (
@@ -61,6 +64,8 @@ if __name__ == "__main__":
         generate_ordered_potential_track_name_sections(known_bone_names)
     )
 
+    print(blender_docs_words)
+
     # sec1_list = map_to_title(
     #     filter_no_numbers(
     #         sec1_list
@@ -77,10 +82,22 @@ if __name__ == "__main__":
     # sec4_list = map_to_title(sec4_list) + [""]
     # sec5_list = map_to_title(sec5_list) + [""]
     # sec6_list = map_to_title(sec6_list) + [""]
-    sec1_list = ["jugal", "Jugal"]
-    sec2_list = ["l", "r", "L", "R"]
-    sec3_list = numbers_with_leading_zero
+    # sec1_list = sec1_list + ['FCurve', 'f_curve', 'fcurve', 'F_Curve', 'Skeleton', 'skeleton', 'BlendSpace']
+    # sec2_list = sec2_list + ['FCurve', 'f_curve', 'fcurve', 'F_Curve', 'Skeleton', 'skeleton', 'BlendSpace']
+    # sec3_list = sec3_list + ['curve', 'Curve','curves', 'Curves','FCurve', 'f_curve', 'fcurve', 'F_Curve', 'Skeleton', 'skeleton', 'BlendSpace']
+    # sec4_list = sec4_list + ['curve', 'Curve','curves', 'Curves','FCurve', 'f_curve', 'fcurve', 'F_Curve', 'Skeleton', 'skeleton', 'BlendSpace']
+    # sec5_list = sec5_list + ['FCurve', 'f_curve', 'fcurve', 'F_Curve', 'Skeleton', 'skeleton', 'BlendSpace']
+    # guesses = ["HUM", "HUM_F", "hum", "Hum" "Human", "human"]
+    guesses = blender_docs_words + extras
+    sec1_list = sec1_list + guesses
+    sec2_list = sec2_list + guesses
+    sec3_list = sec3_list + guesses
+    # sec4_list = [""]
+    # sec5_list = [""]
+    # sec6_list = [""]
     # sec3_list = ["FR", "FL", "BR", "BL"]
+
+    print(extras)
 
     search_for_known_hashes(
         sec1_list,

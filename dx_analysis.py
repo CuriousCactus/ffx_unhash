@@ -11,7 +11,7 @@ from utils.string_utils import (
 )
 
 BONES_MAP_DX_NEW_PATH = os.path.join(
-    os.path.dirname(__file__), "maps/tracks_map_b4.json"
+    os.path.dirname(__file__), "maps/output.json"
 )
 
 if __name__ == "__main__":
@@ -30,8 +30,8 @@ if __name__ == "__main__":
     for potential_bone_name in potential_bone_names:
         for i, sep in enumerate(separators):
             if (
-                potential_bone_name.count(sep) > 0
-                and potential_bone_name.count(sep) < 4
+                potential_bone_name.count(sep) < 4
+                and potential_bone_name.count(separators[i - 1]) == 0
                 and potential_bone_name[0] != sep
                 and potential_bone_name[-1] != sep
                 and not re.match("[A-Z]", potential_bone_name[-1])
@@ -40,8 +40,7 @@ if __name__ == "__main__":
                 and not re.match(
                     "[aeiouAEIOU][aeiouAEIOU][aeiouAEIOU]", potential_bone_name
                 )
-                and potential_bone_name.count(separators[i - 1]) == 0
-                and len(re.findall("[0-9]", potential_bone_name)) < 3
+                and len(re.findall("[0-9]", potential_bone_name)) < 4
                 and not potential_bone_name[0].isdigit()
             ):
                 hits.append(potential_bone_name)

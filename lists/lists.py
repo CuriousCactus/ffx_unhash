@@ -375,7 +375,7 @@ lower_case_letters = list(string.ascii_lowercase)
 numbers = [str(i) for i in range(15)]
 numbers_with_leading_zero = [f"0{i}" for i in range(10)]
 
-extras_no_cap_variants = (
+extras = (
     ["", "s"]
     + extra_directions
     + extra_body_parts
@@ -386,7 +386,3 @@ extras_no_cap_variants = (
     # + numbers_with_leading_zero
     # + ipa
 )
-
-extras_cap_variants = get_capitalisation_variants(extras_no_cap_variants)
-
-extras = extras_cap_variants

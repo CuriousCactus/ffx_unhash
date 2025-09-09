@@ -1,28 +1,31 @@
 import os
-from utils.file_utils import load_map, get_known_track_names
-from utils.string_utils import generate_potential_track_name_sections, print_list
+from utils.file_utils import load_map
+from utils.string_utils import generate_potential_track_name_sections, print_list, get_known_track_names
 from ffx_tracks_unhash import TRACKS_MAP_NEW_PATH
 from ffx_bones_unhash import BONES_MAP_NEW_PATH
-from lists.lists import extras_cap_variants
+from lists.lists import extras
 
 COLLISIONS_PATH = os.path.join(
-    os.path.dirname(__file__), "collisions\\286965447607146401.cols"
+    os.path.dirname(__file__), "collisions/286965447607146401.cols"
 )
 
+log_file_name = 'filter_collisions.log'
 
 def filter_collisions():
     tracks_map_json = load_map(TRACKS_MAP_NEW_PATH)
-    known_track_names, _ = get_known_track_names(tracks_map_json)
+    known_track_names, _ = get_known_track_names(tracks_map_json, log_file_name)
     bones_map_json = load_map(BONES_MAP_NEW_PATH)
-    known_bone_names, _ = get_known_track_names(bones_map_json)
+    known_bone_names, _ = get_known_track_names(bones_map_json, log_file_name)
 
     print_list(known_track_names, "Known track names")
     print_list(known_bone_names, "Known bone names")
 
     potential_track_name_sections = generate_potential_track_name_sections(
         known_track_names + known_bone_names,
-        extras_cap_variants,
+        extras,
         get_cap_variants=True,
+        get_extras_cap_variants=True,
+        log_file_name=log_file_name,
     )
 
     long_sections = list(filter(lambda x: len(x) > 4, potential_track_name_sections))

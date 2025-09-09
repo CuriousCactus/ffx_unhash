@@ -14,20 +14,24 @@ from lists.blender_error_bones import blender_error_bones
 if __name__ == "__main__":
     map_json = load_map(BONES_MAP_NEW_PATH)
 
-    known_track_names, known_track_hashes = get_known_track_names(
+    known_bone_names, known_bone_hashes = get_known_track_names(
         map_json, "message.log"
     )
 
-    potential_track_names = blender_bones + blender_error_bones + ["Jaw_R_0"]
+    potential_track_names = blender_bones + blender_error_bones + ["Jaw_R_0", "Squint_M"]
 
     for name in potential_track_names:
-        result = check_hash(known_track_hashes, False, name)
+        result = check_hash(known_bone_hashes, False, name)
 
         print(f"Result for {name}: {result}")
-        if result[0] and name not in known_track_names:
+        if result[0] and name not in known_bone_names:
             print("TADA")
             write_track_name(name, result[0], BONES_MAP_NEW_PATH)
-        elif name in known_track_names:
+        elif name in known_bone_names:
             print("Already known")
         else:
             print("Not a hit")
+
+    for known_bone_name in known_bone_names:
+        if known_bone_name not in blender_bones:
+            print(known_bone_name)
