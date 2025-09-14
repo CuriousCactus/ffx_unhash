@@ -14,11 +14,11 @@ from lists.blender_error_bones import blender_error_bones
 if __name__ == "__main__":
     map_json = load_map(BONES_MAP_NEW_PATH)
 
-    known_bone_names, known_bone_hashes = get_known_track_names(
-        map_json, "message.log"
-    )
+    known_bone_names, known_bone_hashes = get_known_track_names(map_json, "message.log")
 
-    potential_track_names = blender_bones + blender_error_bones + ["Jaw_R_0", "Squint_M"]
+    potential_track_names = (
+        blender_bones + blender_error_bones + ["Jaw_R_0", "Squint_M"]
+    )
 
     for name in potential_track_names:
         result = check_hash(known_bone_hashes, False, name)
@@ -32,6 +32,7 @@ if __name__ == "__main__":
         else:
             print("Not a hit")
 
+    print("Not in blender bones:")
     for known_bone_name in known_bone_names:
         if known_bone_name not in blender_bones:
             print(known_bone_name)

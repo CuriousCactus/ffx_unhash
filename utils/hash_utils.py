@@ -1,6 +1,7 @@
 import datetime
 import time
 from multiprocessing import Process, cpu_count
+from fnvhash import fnv, fnv1_32, fnv1a_32, fnv0_32, fnv0_64, fnv1_64, fnv1a_64, fnva
 
 from murmurhash import mrmr
 
@@ -19,13 +20,18 @@ def split_list_into_chunks_of_length(lst, chunk_size):
     return [lst[i : i + chunk_size] for i in range(0, len(lst), chunk_size)]
 
 
-def check_hash(known_track_hashes, only_long, track_name):
+def check_hash(known_track_hashes, only_long, track_name, hash_algorithm):
     if len(track_name) < 16 and only_long:
         return None, None
 
-    generated_track_hash = (
-        mrmr.hash64_py(track_name.encode(), seed=SEED) & 0xFFFFFFFFFFFFFFFF
-    )
+    if hash_algorithm == "murmur":
+        generated_track_hash = (
+            mrmr.hash64_py(track_name.encode(), seed=SEED) & 0xFFFFFFFFFFFFFFFF
+        )
+    elif hash_algorithm == "fnv":
+        generated_track_hash = fnv1_32(track_name.lower().encode())
+    else:
+        generated_track_hash = None
 
     if generated_track_hash in known_track_hashes:
         return generated_track_hash, track_name
@@ -50,6 +56,7 @@ def check_hashes(
     sec6_list,
     output_file_name,
     log_file_name,
+    hash_algorithm,
 ):
     re_found_hits = []
     new_hits = []
@@ -67,7 +74,13 @@ def check_hashes(
         sep5_list,
         sec6_list,
     ):
-        result = check_hash(known_track_hashes, only_long, track_name)
+        result = check_hash(
+            known_track_hashes,
+            only_long,
+            track_name,
+            hash_algorithm,
+        )
+
         hash_hit = result[0]
 
         if hash_hit is None:
@@ -81,22 +94,6 @@ def check_hashes(
             print(f"New hit: {track_name} -> {hash_hit}")
             new_hits.append(track_name)
             write_track_name(track_name, hash_hit, output_file_name)
-
-    # re_found_hits = list(set(re_found_hits))
-    # new_hits = list(set(new_hits))
-
-    # print_list(re_found_hits, "Known hits", log_file_name)
-
-    # if len(re_found_hits) < len(known_track_names):
-    #     print(
-    #         f"Warning: Only re-found {len(re_found_hits)} of {len(known_track_names)} known track names!"
-    #     )
-
-    #     print_list(
-    #         sorted(set(known_track_names) - set(re_found_hits)),
-    #         "Missing hits",
-    #         log_file_name,
-    #     )
 
     print_list(new_hits, "New hits", log_file_name)
 
@@ -118,6 +115,7 @@ def search_for_known_hashes(
     output_file_name,
     only_long=False,
     log_file_name="",
+    hash_algorithm="murmur",
 ):
     start = time.time()
 
@@ -184,6 +182,7 @@ def search_for_known_hashes(
                     sec6_list,
                     output_file_name,
                     log_file_name,
+                    hash_algorithm,
                 ),
             )
             p.start()

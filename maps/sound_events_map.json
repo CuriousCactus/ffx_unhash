@@ -1,0 +1,1163 @@
+{
+    "1276997558": [
+        "Act2_end_Moonrise_meeting"
+    ],
+    "3829786434": [
+        "Adamantine_Golem_Fight_Phase_II"
+    ],
+    "953589867": [
+        "Assault_On_Moonrise_Tower"
+    ],
+    "4114856630": [
+        "Astral_Plane_Dark"
+    ],
+    "2426895812": [
+        "Astral_Plane_Light_01"
+    ],
+    "2426895815": [
+        "Astral_Plane_Light_02"
+    ],
+    "2393829523": [
+        "BG3_Cinematic_Track_01_Brass"
+    ],
+    "3511362474": [
+        "BG3_Theme_02_Motif"
+    ],
+    "2212504583": [
+        "Camp_BGO"
+    ],
+    "2769783048": [
+        "Camp_positive"
+    ],
+    "3487884831": [
+        "Camp_SCL_Forest"
+    ],
+    "4195510308": [
+        "Camp_SCL_Haven"
+    ],
+    "37801456": [
+        "Camp_SCL_Moonrise"
+    ],
+    "3182425312": [
+        "Camp_SCL_Shar"
+    ],
+    "50551777": [
+        "Camp_Underdark"
+    ],
+    "833361299": [
+        "Campsite_DungeonAbbey"
+    ],
+    "1246958946": [
+        "CharacterCreation_Theme_Start"
+    ],
+    "1077957255": [
+        "Choral_Intro"
+    ],
+    "3925087490": [
+        "CINE_AdamantineGolemSpawn"
+    ],
+    "2258548056": [
+        "CINE_AdamantineGolemSpawn_End"
+    ],
+    "3429576349": [
+        "CINE_MyconidCircle_BroodingSovereign"
+    ],
+    "764910261": [
+        "CINE_UND_DuergarCamp_Checkpoint"
+    ],
+    "3337559702": [
+        "CINE_UND_Raft_Sail"
+    ],
+    "2242575491": [
+        "Cinematic_Fight_Theme_01_On"
+    ],
+    "488008126": [
+        "Cinematic_Fight_Theme_B"
+    ],
+    "1539486726": [
+        "Circus_Music_empty"
+    ],
+    "3559093835": [
+        "CRE_Monastery_SelfDestruct_Off"
+    ],
+    "826835255": [
+        "CRE_Monastery_SelfDestruct_On"
+    ],
+    "2273064674": [
+        "Credits_menu_Enter"
+    ],
+    "31382789": [
+        "Credits_menu_Leave"
+    ],
+    "2554028675": [
+        "Daisy_char_creation_Enter"
+    ],
+    "2473226462": [
+        "DEN_Goblins_Attack_Cine"
+    ],
+    "737184257": [
+        "DEN_Goblins_Attack_Explo_reset"
+    ],
+    "3339450016": [
+        "DEN_Goblins_Fight_On"
+    ],
+    "3027115798": [
+        "Dream_song"
+    ],
+    "2517701296": [
+        "Explo_BGO_Beach"
+    ],
+    "2191998680": [
+        "Explo_BGO_Bridge"
+    ],
+    "487823402": [
+        "Explo_BGO_Circus"
+    ],
+    "2118462994": [
+        "Explo_BGO_Dragon_Sanctum"
+    ],
+    "3755387707": [
+        "Explo_BGO_JungleOfChult"
+    ],
+    "1401092288": [
+        "Explo_BGO_Main"
+    ],
+    "858226170": [
+        "Explo_BGO_Prison"
+    ],
+    "1485609466": [
+        "Explo_BGO_Sharess"
+    ],
+    "548178803": [
+        "Explo_BGO_Sharess_RafaelDen"
+    ],
+    "1038043241": [
+        "Explo_BGO_Smithy_Cellar"
+    ],
+    "48569593": [
+        "Explo_BGO_undergrounds_01"
+    ],
+    "3138123886": [
+        "Explo_BGO_WyrmsRockFortress"
+    ],
+    "1915783097": [
+        "Explo_BGO_WyrmsRockFortress_intro"
+    ],
+    "2676789415": [
+        "Explo_BGO_WyrmsRockFortressHall"
+    ],
+    "2286748877": [
+        "Explo_BGO_WyrmWay"
+    ],
+    "549558115": [
+        "Explo_CTY_Bank"
+    ],
+    "1320520669": [
+        "Explo_CTY_Bhaal_Temple"
+    ],
+    "4064362967": [
+        "Explo_CTY_Bhaal_Tribunal"
+    ],
+    "664710951": [
+        "Explo_CTY_Bhaalist_underground"
+    ],
+    "2087872824": [
+        "Explo_CTY_BlushingMermaid"
+    ],
+    "3934950130": [
+        "Explo_CTY_Cassador_Palace"
+    ],
+    "1831835669": [
+        "Explo_CTY_CazadorDungeon"
+    ],
+    "579974102": [
+        "Explo_CTY_DarkmoonChamberOfLoss"
+    ],
+    "3777215063": [
+        "Explo_CTY_DarkmoonCloister"
+    ],
+    "1400168716": [
+        "Explo_CTY_DiabolistHouse"
+    ],
+    "3871961143": [
+        "Explo_CTY_Docks"
+    ],
+    "3692125844": [
+        "Explo_CTY_Elfsong_Tavern"
+    ],
+    "4148332428": [
+        "Explo_CTY_ElfsongCamp"
+    ],
+    "1234601213": [
+        "Explo_CTY_FlymmCargoBasement"
+    ],
+    "823048765": [
+        "Explo_CTY_Gen_Dark_Ambient"
+    ],
+    "1146244038": [
+        "Explo_CTY_HauseOfHag"
+    ],
+    "3354873226": [
+        "Explo_CTY_HouseOfHope"
+    ],
+    "4248151882": [
+        "Explo_CTY_HouseOfHope_Final_Act"
+    ],
+    "132354565": [
+        "Explo_CTY_HouseOfHope_intro"
+    ],
+    "1930027968": [
+        "Explo_CTY_Indoor"
+    ],
+    "2612917311": [
+        "Explo_CTY_Indoor_Exit"
+    ],
+    "4246334849": [
+        "Explo_CTY_Jaheira_basement"
+    ],
+    "2165180182": [
+        "Explo_CTY_Jaheira_house"
+    ],
+    "1732559793": [
+        "Explo_CTY_Jini"
+    ],
+    "3590217476": [
+        "Explo_CTY_KnightsOfTheShield"
+    ],
+    "1049876696": [
+        "Explo_CTY_Mynsc_Hideout"
+    ],
+    "3935937518": [
+        "Explo_CTY_Part_1_Beach"
+    ],
+    "3959651006": [
+        "Explo_CTY_Part_1_Main"
+    ],
+    "2745112571": [
+        "Explo_CTY_Part_2_Main"
+    ],
+    "2253467564": [
+        "Explo_CTY_Sewers"
+    ],
+    "3877109919": [
+        "Explo_CTY_SorcerousSundries"
+    ],
+    "1742980874": [
+        "Explo_CTY_SteelWatchFoundry"
+    ],
+    "3879276349": [
+        "Explo_CTY_SteelWatchSecurity"
+    ],
+    "3248193020": [
+        "Explo_CTY_SWF_ControlCentre"
+    ],
+    "3442727166": [
+        "Explo_CTY_Temple"
+    ],
+    "4273870255": [
+        "Explo_CTY_undergrounds_01"
+    ],
+    "2569642358": [
+        "Explo_CTY_WaterQueensHouseFuneral"
+    ],
+    "3830356817": [
+        "Explo_End_Morphic_pool_P1"
+    ],
+    "3122514024": [
+        "Explo_End_Tension"
+    ],
+    "2647549316": [
+        "Explo_End_Upper_City"
+    ],
+    "2195390302": [
+        "Explo_End_WhiteburnEstate"
+    ],
+    "3566145207": [
+        "Explo_Gortash_Signal"
+    ],
+    "3864179403": [
+        "Explo_IRN_Main"
+    ],
+    "3222176304": [
+        "Explo_MF_Colony_01"
+    ],
+    "3222176307": [
+        "Explo_MF_Colony_02"
+    ],
+    "1399032490": [
+        "Explo_MF_Colony_03_A"
+    ],
+    "1399032489": [
+        "Explo_MF_Colony_03_B"
+    ],
+    "3222176309": [
+        "Explo_MF_Colony_04"
+    ],
+    "3455557855": [
+        "Explo_MF_Colony_Vista_Point"
+    ],
+    "998042225": [
+        "Explo_Moonrise_Ambient"
+    ],
+    "2557754458": [
+        "Explo_Moonrise_Ketheric"
+    ],
+    "1689069691": [
+        "Explo_Moonrise_Ketheric_oneshot"
+    ],
+    "3299416455": [
+        "Explo_Orin_impersonation"
+    ],
+    "348370948": [
+        "Explo_Set_03_Requiem_Ambient"
+    ],
+    "4286685499": [
+        "Explo_Set_03_Requiem_Main"
+    ],
+    "336264312": [
+        "Explo_Set_08_Dark_01"
+    ],
+    "3946114245": [
+        "Explo_Set_08_Dark_01_Deep"
+    ],
+    "336264315": [
+        "Explo_Set_08_Dark_02"
+    ],
+    "2138204264": [
+        "Explo_Set_08_Dark_02_Deep"
+    ],
+    "336264314": [
+        "Explo_Set_08_Dark_03"
+    ],
+    "2713084281": [
+        "Explo_Set_08_Main"
+    ],
+    "3150582217": [
+        "Explo_Set_08_Myst"
+    ],
+    "2354318409": [
+        "Explo_Set_09_Dark"
+    ],
+    "2987836834": [
+        "Explo_Set_09_Myst"
+    ],
+    "1322931455": [
+        "Explo_Set_Char_Library"
+    ],
+    "3864991310": [
+        "Explo_Set_Char_signal"
+    ],
+    "4146358498": [
+        "Explo_Theme_07_Ambient_01"
+    ],
+    "2293737558": [
+        "Explo_Theme_07_Dark_01"
+    ],
+    "54327688": [
+        "Explo_Theme_10_Dark"
+    ],
+    "3715776603": [
+        "Explo_Theme_10_Myst"
+    ],
+    "1206773147": [
+        "Explo_Theme_1616_Ambient_01"
+    ],
+    "2299660985": [
+        "Explo_Theme_916_Dark_01"
+    ],
+    "2299660986": [
+        "Explo_Theme_916_Dark_02"
+    ],
+    "2299660987": [
+        "Explo_Theme_916_Dark_03"
+    ],
+    "1082373288": [
+        "Explo_Theme_916_Dark_03_deep"
+    ],
+    "1003890122": [
+        "Explo_Theme_916_Mystic"
+    ],
+    "3349598463": [
+        "Explo_Theme_916_Mystic_deep"
+    ],
+    "3671956875": [
+        "Explo_Theme_WMPA_Countdown"
+    ],
+    "3799789296": [
+        "Explo_Theme_WMPA_Dark_01"
+    ],
+    "3799789299": [
+        "Explo_Theme_WMPA_Dark_02"
+    ],
+    "3799789298": [
+        "Explo_Theme_WMPA_Dark_03"
+    ],
+    "2871414296": [
+        "Explo_Theme_WMPA_Dramatic_Signal"
+    ],
+    "1068527153": [
+        "Explo_Theme_WMPA_Myst"
+    ],
+    "1386683182": [
+        "Explo_Theme_WMPA_Myst_Deep"
+    ],
+    "1950343988": [
+        "Explo_Theme_WMPA_Orch"
+    ],
+    "1661129376": [
+        "Explo_Theme_WMPA_Tension"
+    ],
+    "722019697": [
+        "Explo_Theme_WMPA_Tension_loop"
+    ],
+    "4270082527": [
+        "Explo_Theme_WMPA_Tension_perc"
+    ],
+    "2769298148": [
+        "Explo_Underdark_01_A"
+    ],
+    "2769298151": [
+        "Explo_Underdark_01_B"
+    ],
+    "2769298150": [
+        "Explo_Underdark_01_C"
+    ],
+    "2151591723": [
+        "Ext_Set_05_Explo_Dark_01"
+    ],
+    "2852657315": [
+        "Ext_Set_05_Explo_Dark_01_choir"
+    ],
+    "540782887": [
+        "Fight_Ketheric_On"
+    ],
+    "2636922624": [
+        "Fight_Mode_Dark_On"
+    ],
+    "884294752": [
+        "Fight_Mode_Light_On"
+    ],
+    "1854785804": [
+        "Fight_Myrkull_On"
+    ],
+    "1881975731": [
+        "Fight_Set_Gortash_On"
+    ],
+    "2690796813": [
+        "Fight_Set_Moonrise_On"
+    ],
+    "239882958": [
+        "Fight_Set_NetherBrain_Inside"
+    ],
+    "3387323819": [
+        "Fight_Set_NetherBrain_Outside"
+    ],
+    "2254655594": [
+        "Fight_Set_Raphael_On"
+    ],
+    "3498189496": [
+        "Fight_Theme_03_Dark_On"
+    ],
+    "2789503303": [
+        "Fight_Theme_03_On"
+    ],
+    "3751435312": [
+        "Fight_Theme_04_12_On"
+    ],
+    "2004030937": [
+        "Fight_Theme_06_Dark_On"
+    ],
+    "4173226895": [
+        "Fight_Theme_06_II_On"
+    ],
+    "2155087491": [
+        "Fight_Theme_1616_Dark_On"
+    ],
+    "2819030182": [
+        "Fight_Theme_1616_On"
+    ],
+    "3224598991": [
+        "Fight_Theme_916_Dark_On"
+    ],
+    "1280935882": [
+        "Fight_Theme_916_On"
+    ],
+    "924534132": [
+        "Fight_Theme_916_Quartet_Horror_On"
+    ],
+    "3814084595": [
+        "Fight_Theme_916_Quartet_On"
+    ],
+    "790255615": [
+        "Fight_Theme_916_Tutorial_A"
+    ],
+    "1639106619": [
+        "Fight_Theme_98_On"
+    ],
+    "2061519571": [
+        "Fight_Theme_Bhaalists_On"
+    ],
+    "3607661593": [
+        "Fight_Theme_Highhall_On"
+    ],
+    "3887429602": [
+        "Fight_Theme_Percussive_02_On"
+    ],
+    "4149727171": [
+        "Fight_Theme_Percussive_On"
+    ],
+    "3945048076": [
+        "Fight_Theme_Uni_On"
+    ],
+    "1556328214": [
+        "Fight_Theme_WMPA_Dark_On"
+    ],
+    "922321517": [
+        "Fight_Theme_WMPA_On"
+    ],
+    "1747506787": [
+        "Glob_Dark_Ambient_01"
+    ],
+    "1747506784": [
+        "Glob_Dark_Ambient_02"
+    ],
+    "1747506785": [
+        "Glob_Dark_Ambient_03"
+    ],
+    "1747506790": [
+        "Glob_Dark_Ambient_04"
+    ],
+    "1747506791": [
+        "Glob_Dark_Ambient_05"
+    ],
+    "1747506788": [
+        "Glob_Dark_Ambient_06"
+    ],
+    "1747506789": [
+        "Glob_Dark_Ambient_07"
+    ],
+    "1747506794": [
+        "Glob_Dark_Ambient_08"
+    ],
+    "1747506795": [
+        "Glob_Dark_Ambient_09"
+    ],
+    "1764284373": [
+        "Glob_Dark_Ambient_10"
+    ],
+    "1764284372": [
+        "Glob_Dark_Ambient_11"
+    ],
+    "2593480176": [
+        "Goblins_Dead"
+    ],
+    "2711962849": [
+        "Goblins_Poisoned"
+    ],
+    "1339749796": [
+        "Hag_Fight_On"
+    ],
+    "2151220270": [
+        "Hag_Reveal_Stinger"
+    ],
+    "1969698901": [
+        "Harpy_song"
+    ],
+    "428083455": [
+        "Hav_Portal_Fight_Drive_On"
+    ],
+    "3294350651": [
+        "Hell_reveal_stinger"
+    ],
+    "3455373690": [
+        "Ketheric_city"
+    ],
+    "716383994": [
+        "Ketheric_Runepowder_room"
+    ],
+    "958282654": [
+        "KillingBlow_Enemy"
+    ],
+    "1179413109": [
+        "KillingBlow_Player"
+    ],
+    "1640629576": [
+        "Leasel_Recruitment"
+    ],
+    "2579165773": [
+        "LevelUp_Theme_Start"
+    ],
+    "507757327": [
+        "LevelUp_Theme_Stop"
+    ],
+    "3571695657": [
+        "Main_Theme_Signal_03"
+    ],
+    "2116572061": [
+        "Menu_Theme_Stop"
+    ],
+    "578529545": [
+        "MF_Theme_intro"
+    ],
+    "2422378410": [
+        "MF_Theme_intro_stinger"
+    ],
+    "1091561118": [
+        "MF_Theme_On"
+    ],
+    "1572239276": [
+        "MF_Theme_Orch_Tension"
+    ],
+    "1563653813": [
+        "MindFleyer_Chant"
+    ],
+    "355798590": [
+        "MindFleyer_Theme"
+    ],
+    "1510457301": [
+        "Monitor"
+    ],
+    "504140476": [
+        "Monitor_CampVisit"
+    ],
+    "1991386399": [
+        "Moonrise_Tower_Assault"
+    ],
+    "1086690760": [
+        "Moonrise_Tower_Assault_finished"
+    ],
+    "2293145346": [
+        "Music_ARM_Instrument_Drum"
+    ],
+    "2571107972": [
+        "Music_ARM_Instrument_Flute"
+    ],
+    "10919038": [
+        "Music_ARM_Instrument_Lute"
+    ],
+    "4270359428": [
+        "Music_ARM_Instrument_Lyre"
+    ],
+    "2806186649": [
+        "Music_ARM_Instrument_Violin"
+    ],
+    "898224073": [
+        "Music_Bard_Screen_Off"
+    ],
+    "3477027581": [
+        "Music_Bard_Screen_On"
+    ],
+    "3851344680": [
+        "Music_Exploration_Reset"
+    ],
+    "1420987853": [
+        "Music_Fight_AdamantineGolem_Win"
+    ],
+    "452018393": [
+        "Music_Fight_AllyKilled"
+    ],
+    "3400508790": [
+        "Music_Fight_Drive_Off"
+    ],
+    "1173434552": [
+        "Music_Fight_Drive_On"
+    ],
+    "1843872079": [
+        "Music_Fight_End"
+    ],
+    "607345890": [
+        "Music_Fight_Finished_Lose"
+    ],
+    "3335942009": [
+        "Music_Fight_Finished_Win"
+    ],
+    "2441334188": [
+        "Music_Fight_PlayerDowned"
+    ],
+    "3630426969": [
+        "Music_Fight_Resume"
+    ],
+    "3986302892": [
+        "Music_Fight_Start"
+    ],
+    "1940217408": [
+        "Music_Game_Enter"
+    ],
+    "1401360260": [
+        "Music_Game_Over"
+    ],
+    "1489615104": [
+        "Music_Game_Pause"
+    ],
+    "1674987843": [
+        "Music_Game_Reset"
+    ],
+    "1685870043": [
+        "Music_Game_Resume"
+    ],
+    "3614514634": [
+        "Music_Game_Stop"
+    ],
+    "2554413579": [
+        "Music_KethericFight_Dead"
+    ],
+    "382561731": [
+        "Music_KethericFight_MyrkulDefeated"
+    ],
+    "2749096004": [
+        "Music_KethericFight_NightsongFree"
+    ],
+    "353259990": [
+        "Music_Lobby_Screen"
+    ],
+    "1383582876": [
+        "Music_Lobby_Screen_Off"
+    ],
+    "1625013402": [
+        "Music_MainMenu_Screen"
+    ],
+    "34957304": [
+        "Music_MyrkulFight_Start"
+    ],
+    "2899509660": [
+        "Music_Off"
+    ],
+    "4235214894": [
+        "Music_Off_General_Explo"
+    ],
+    "3085006976": [
+        "Music_RestAll"
+    ],
+    "419782582": [
+        "Music_Set_GameState_Amb"
+    ],
+    "201667642": [
+        "Music_Set_GameState_Drive"
+    ],
+    "620022096": [
+        "Music_Set_GameState_None"
+    ],
+    "3269042846": [
+        "Music_Start_Screen"
+    ],
+    "4195265613": [
+        "Music_Status_Sneaking_Enter"
+    ],
+    "238963042": [
+        "Music_Status_Sneaking_Leave"
+    ],
+    "3546986091": [
+        "Music_Toggle_Off"
+    ],
+    "4209225175": [
+        "Music_Toggle_On"
+    ],
+    "4174621271": [
+        "MusicNeuralApparatus_Elevator"
+    ],
+    "2922084701": [
+        "MusicTraversalGem"
+    ],
+    "688483788": [
+        "Myconids_Explo_01"
+    ],
+    "2021220646": [
+        "Nautiloid_Crash_Cine"
+    ],
+    "4199267244": [
+        "Nightsong_prison"
+    ],
+    "1651853090": [
+        "Nightsong_prison_end_cue"
+    ],
+    "517063404": [
+        "NightsongDead"
+    ],
+    "1037499852": [
+        "NightsongFree"
+    ],
+    "1004456688": [
+        "PLA_DragonEvent_Music"
+    ],
+    "3611946134": [
+        "PLA_DragonEvent_Music_End"
+    ],
+    "378799171": [
+        "RaphaelsFinalAct"
+    ],
+    "4215301056": [
+        "Requiem_bridge_loop_01"
+    ],
+    "1571146881": [
+        "SCL_Haven_Dom_Destroyed"
+    ],
+    "1086192880": [
+        "Se_07_FadeOut"
+    ],
+    "3517362103": [
+        "Set_01_cine_plea_at_the_gates"
+    ],
+    "303213543": [
+        "Set_01_cine_thralls_at_crashsite"
+    ],
+    "3714086897": [
+        "Set_01_Explo_Campsite"
+    ],
+    "3499971943": [
+        "Set_01_Explo_Dark_01"
+    ],
+    "3499971940": [
+        "Set_01_Explo_Dark_02"
+    ],
+    "3499971941": [
+        "Set_01_Explo_Dark_03"
+    ],
+    "3228491424": [
+        "Set_01_Explo_Dark_03_classic"
+    ],
+    "3997886097": [
+        "Set_01_Explo_Dark_03_endark"
+    ],
+    "3499971938": [
+        "Set_01_Explo_Dark_04"
+    ],
+    "4144741071": [
+        "Set_01_Explo_Dark_04_classic"
+    ],
+    "3546930195": [
+        "Set_01_Explo_Dark_04_cut"
+    ],
+    "1299975459": [
+        "Set_01_Explo_Dark_04_Start"
+    ],
+    "3499971939": [
+        "Set_01_Explo_Dark_05"
+    ],
+    "3407692787": [
+        "Set_01_Explo_Dark_05_endark"
+    ],
+    "4254650958": [
+        "Set_01_Explo_Dark_stinger_01"
+    ],
+    "4254650957": [
+        "Set_01_Explo_Dark_stinger_02"
+    ],
+    "2385328693": [
+        "Set_01_Explo_Light_01"
+    ],
+    "2385328694": [
+        "Set_01_Explo_Light_02"
+    ],
+    "2385328695": [
+        "Set_01_Explo_Light_03"
+    ],
+    "2925243251": [
+        "Set_01_Explo_Light_Main"
+    ],
+    "182315570": [
+        "Set_01_Explo_Light_Main_Lite"
+    ],
+    "2354920360": [
+        "Set_01_Explo_Light_stinger_01"
+    ],
+    "1743208062": [
+        "Set_01_Explo_Myst_01"
+    ],
+    "706622146": [
+        "Set_01_Explo_Off"
+    ],
+    "3747246564": [
+        "Set_01_Explo_reset"
+    ],
+    "4039868659": [
+        "Set_01_Explo_Stinger_01"
+    ],
+    "4039868656": [
+        "Set_01_Explo_Stinger_02"
+    ],
+    "4039868657": [
+        "Set_01_Explo_Stinger_03"
+    ],
+    "4039868662": [
+        "Set_01_Explo_Stinger_04"
+    ],
+    "4039868663": [
+        "Set_01_Explo_Stinger_05"
+    ],
+    "4039868660": [
+        "Set_01_Explo_Stinger_06"
+    ],
+    "4039868661": [
+        "Set_01_Explo_Stinger_07"
+    ],
+    "4039868666": [
+        "Set_01_Explo_Stinger_08"
+    ],
+    "4039868667": [
+        "Set_01_Explo_Stinger_09"
+    ],
+    "4056646245": [
+        "Set_01_Explo_Stinger_10"
+    ],
+    "4056646244": [
+        "Set_01_Explo_Stinger_11"
+    ],
+    "4056646247": [
+        "Set_01_Explo_Stinger_12"
+    ],
+    "4056646241": [
+        "Set_01_Explo_Stinger_14"
+    ],
+    "3733474776": [
+        "Set_01_Explo_Stinger_psy_01"
+    ],
+    "3733474779": [
+        "Set_01_Explo_Stinger_psy_02"
+    ],
+    "3733474778": [
+        "Set_01_Explo_Stinger_psy_03"
+    ],
+    "3733474781": [
+        "Set_01_Explo_Stinger_psy_04"
+    ],
+    "3733474780": [
+        "Set_01_Explo_Stinger_psy_05"
+    ],
+    "3733474783": [
+        "Set_01_Explo_Stinger_psy_06"
+    ],
+    "474278855": [
+        "Set_01_I_want_to_live_song"
+    ],
+    "3629056325": [
+        "Set_01_Music_Off"
+    ],
+    "3508642334": [
+        "Set_01_Restless_Dreams"
+    ],
+    "1102708016": [
+        "Set_02_cine_goblin_king"
+    ],
+    "918607866": [
+        "Set_02_Explo_Dark"
+    ],
+    "2242713207": [
+        "Set_02_Explo_Dark_ambient"
+    ],
+    "3734675896": [
+        "Set_02_Explo_Dark_ambient_02"
+    ],
+    "3689557492": [
+        "Set_02_Explo_Guitar"
+    ],
+    "1723887429": [
+        "Set_02_Explo_Mystic"
+    ],
+    "185799617": [
+        "Set_02_Explo_Piano"
+    ],
+    "4280534142": [
+        "Set_02_Explo_Stinger_01"
+    ],
+    "4280534141": [
+        "Set_02_Explo_Stinger_02"
+    ],
+    "4280534140": [
+        "Set_02_Explo_Stinger_03"
+    ],
+    "4280534139": [
+        "Set_02_Explo_Stinger_04"
+    ],
+    "4280534138": [
+        "Set_02_Explo_Stinger_05"
+    ],
+    "4280534137": [
+        "Set_02_Explo_Stinger_06"
+    ],
+    "4280534136": [
+        "Set_02_Explo_Stinger_07"
+    ],
+    "4280534135": [
+        "Set_02_Explo_Stinger_08"
+    ],
+    "3467932660": [
+        "Set_02_Explo_Tension_full"
+    ],
+    "2636859361": [
+        "Set_02_Explo_Tension_Part_II"
+    ],
+    "27949256": [
+        "Set_02_Explo_Tension_Part_II_oneshot"
+    ],
+    "2937104921": [
+        "Set_02_Fight_On"
+    ],
+    "3089845890": [
+        "Set_02_Fight_perc"
+    ],
+    "2075354642": [
+        "Set_02_Music_off"
+    ],
+    "1518873085": [
+        "Set_03_cine_cha_crypt_OM_Shadowheart"
+    ],
+    "2139917684": [
+        "Set_03_Dark_short_strings_cut_tut_dragonfall"
+    ],
+    "2780436943": [
+        "Set_03_Explo_Campsite_Chapel"
+    ],
+    "1796784525": [
+        "Set_03_Explo_Dark_01"
+    ],
+    "1796784526": [
+        "Set_03_Explo_Dark_02"
+    ],
+    "3831404894": [
+        "Set_03_Explo_Dark_02_cine"
+    ],
+    "1796784527": [
+        "Set_03_Explo_Dark_03"
+    ],
+    "3311499492": [
+        "Set_03_Explo_Dark_03_deep"
+    ],
+    "35811178": [
+        "Set_03_Explo_Myst"
+    ],
+    "3668545557": [
+        "Set_03_Explo_Stinger_01"
+    ],
+    "3668545558": [
+        "Set_03_Explo_Stinger_02"
+    ],
+    "601372382": [
+        "Set_04_Explo_Dark_01"
+    ],
+    "601372381": [
+        "Set_04_Explo_Dark_02"
+    ],
+    "702868138": [
+        "Set_04_Explo_Light_piano"
+    ],
+    "1333062555": [
+        "Set_04_Explo_Myst"
+    ],
+    "2247564204": [
+        "Set_04_Music_Off"
+    ],
+    "3867617732": [
+        "Set_06_Explo_Dark_01"
+    ],
+    "3867617735": [
+        "Set_06_Explo_Dark_02"
+    ],
+    "713338602": [
+        "Set_06_Explo_Dark_02_oneshot"
+    ],
+    "1327311592": [
+        "Set_06_Explo_Dark_04_perc"
+    ],
+    "3867617728": [
+        "Set_06_Explo_Dark_05"
+    ],
+    "3867617731": [
+        "Set_06_Explo_Dark_06"
+    ],
+    "1603094935": [
+        "Set_06_Explo_Dark_06_acoustic"
+    ],
+    "161861001": [
+        "Set_06_Explo_Myst_01"
+    ],
+    "161861002": [
+        "Set_06_Explo_Myst_02"
+    ],
+    "3141444557": [
+        "Set_06_Fight_On"
+    ],
+    "2238279642": [
+        "Set_06_Fight_Stinger_01"
+    ],
+    "2238279641": [
+        "Set_06_Fight_Stinger_02"
+    ],
+    "2238279640": [
+        "Set_06_Fight_Stinger_03"
+    ],
+    "2238279647": [
+        "Set_06_Fight_Stinger_04"
+    ],
+    "2238279646": [
+        "Set_06_Fight_Stinger_05"
+    ],
+    "2238279645": [
+        "Set_06_Fight_Stinger_06"
+    ],
+    "2238279644": [
+        "Set_06_Fight_Stinger_07"
+    ],
+    "2238279635": [
+        "Set_06_Fight_Stinger_08"
+    ],
+    "3911369982": [
+        "Set_06_Music_Off"
+    ],
+    "2977758458": [
+        "Set_06_Test_Event"
+    ],
+    "3434308157": [
+        "Set_07_Explo_Glob_dark_Stinger_01"
+    ],
+    "3735069923": [
+        "Surgery_Of_A_Hope"
+    ],
+    "1333725734": [
+        "Tension_orch_Upbeat"
+    ],
+    "953810266": [
+        "Tension_perc_upbeat_01"
+    ],
+    "953810265": [
+        "Tension_perc_upbeat_02"
+    ],
+    "3109994536": [
+        "Tension_Set_Upbeat"
+    ],
+    "2051500924": [
+        "Theme_916_Lose_choir_stinger"
+    ],
+    "311121913": [
+        "TUT_Dragon_Stinger"
+    ],
+    "521435123": [
+        "TUT_End_Fight_On"
+    ],
+    "3111735324": [
+        "TUT_Helm_Transponder_Music"
+    ],
+    "1061271655": [
+        "Tutorial_Laezel_Meeting"
+    ],
+    "3589066612": [
+        "TWN_DISTILLERY_DRUNK_03_Stinger"
+    ],
+    "4252805184": [
+        "TWN_DISTILLERY_NUMB_Stinger"
+    ],
+    "3874724858": [
+        "UND_DarkLake_EndEA_Music"
+    ],
+    "274085403": [
+        "Underdark_reveal"
+    ],
+    "3870642873": [
+        "UnderStrings_01"
+    ],
+    "1301480678": [
+        "Uni_romance_scene"
+    ],
+    "969159181": [
+        "Uni_romance_scene_exit"
+    ]
+}
