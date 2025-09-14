@@ -17,7 +17,7 @@ def write_log(log_file_name="log.log", message=""):
 
 def write_track_name(track_name, generated_track_hash, output_file_name):
     map_json = load_map(output_file_name)
-    map_json[str(generated_track_hash)] = [track_name]
+    map_json[str(generated_track_hash)].append(track_name)
 
     with open(output_file_name, "w", encoding="utf-8") as f:
         json.dump(map_json, f, ensure_ascii=False, indent=4)

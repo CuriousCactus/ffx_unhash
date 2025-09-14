@@ -58,23 +58,31 @@ if __name__ == "__main__":
 
     sec1_list, sec2_list, sec3_list, sec4_list, sec5_list, sec6_list = (
         generate_ordered_potential_track_name_sections(
-            # known_sound_event_names +
-            track_names_from_spreadsheet
+            known_sound_event_names + track_names_from_spreadsheet
         )
     )
 
-    sep1_list = ["", "_"]
-    sep2_list = ["", "_"]
-    sep3_list = ["", "_"]
-    sep4_list = ["", "_"]
-    sep5_list = ["", "_"]
+    sep1_list = ["", "_", " ", "-"]
+    sep2_list = ["", "_", " ", "-"]
+    sep3_list = ["", "_", " ", "-"]
+    sep4_list = ["", "_", " ", "-"]
+    sep5_list = ["", "_", " ", "-"]
 
-    # sec1_list = potential_track_name_sections
-    # sec2_list = potential_track_name_sections
+    sep1_list = ["", "_", " ", "-"]
+    sep2_list = ["", "_", " ", "-"]
+    sep3_list = [""]
+    sep4_list = [""]
+    sep5_list = [""]
+
+    # sec1_list = ["Act2Campsite10_Music"]
+    # sec2_list = [""]
+    sec3_list = [""]
+    sec1_list = potential_track_name_sections
+    sec2_list = potential_track_name_sections
     # sec3_list = potential_track_name_sections
-    # sec4_list = [""]
-    # sec5_list = [""]
-    # sec6_list = [""]
+    sec4_list = [""]
+    sec5_list = [""]
+    sec6_list = [""]
 
     search_for_known_hashes(
         sec1_list,
