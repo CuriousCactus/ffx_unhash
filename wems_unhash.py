@@ -74,11 +74,11 @@ if __name__ == "__main__":
     sep4_list = [""]
     sep5_list = [""]
 
-    # sec1_list = ["Act2Campsite10_Music"]
-    # sec2_list = [""]
+    sec1_list = ["Dragon_Stinger"]
+    sec2_list = [""]
     sec3_list = [""]
-    sec1_list = potential_track_name_sections
-    sec2_list = potential_track_name_sections
+    # sec1_list = potential_track_name_sections
+    # sec2_list = potential_track_name_sections
     # sec3_list = potential_track_name_sections
     sec4_list = [""]
     sec5_list = [""]

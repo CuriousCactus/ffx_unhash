@@ -1,27 +1,43 @@
 {
-    "726732536": [],
+    "726732536": [
+        "Sorcerous-BBGMDen",
+        "Tutorialdark_Act06Lite"
+    ],
     "831135645": [],
     "632346840": [],
     "591035822": [],
-    "873217141": [],
+    "873217141": [
+        "Daisy_Mind_06"
+    ],
     "230886392": [],
-    "873114941": [],
-    "546531801": [],
+    "873114941": [
+        "Mermaid Visit_N0306"
+    ],
+    "546531801": [
+        "Hall FoundrySet",
+        "OutsidetheQueen Chamber"
+    ],
     "19013407": [],
-    "859090633": [],
+    "859090633": [
+        "Cazadorpianoclassic-Exit",
+        "Cazadorpianoclassic-exit"
+    ],
     "859528972": [],
     "993687569": [
-        "B0504_pianosong"
+        "B0504_pianosong",
+        "B0504_Pianosong"
     ],
     "837466407": [
         "AssaultBGM_Mermaid_music_Avernus"
     ],
     "18532893": [
-        "AdamantineAct_BSignalsong"
+        "AdamantineAct_BSignalsong",
+        "plea_Instrument_Dragon"
     ],
     "704581264": [],
     "740526739": [
-        "AstralAdamantineCInsidecut"
+        "AstralAdamantineCInsidecut",
+        "Whiteburn_Adamantinesignal-Cargo"
     ],
     "285145098": [],
     "722199047": [
@@ -29,46 +45,82 @@
     ],
     "578637813": [
         "Act10MysticThe_Deep",
-        "Act10MysticThe_deep"
+        "Act10MysticThe_deep",
+        "Orin_Cinematicpool11"
     ],
-    "781345046": [],
-    "436237391": [],
-    "329621368": [],
+    "781345046": [
+        "05_Defeated-pianoalt",
+        "Smithy-Shield-death"
+    ],
+    "436237391": [
+        "MotifIntro_Pause",
+        "Motifintro_Pause",
+        "Strings-Event-Explo",
+        "strings-Event-Explo"
+    ],
+    "329621368": [
+        "08_Queens-battle"
+    ],
     "985694728": [],
     "852025625": [],
     "959308227": [],
     "981096180": [],
-    "978218755": [],
-    "430807038": [],
+    "978218755": [
+        "Haven Dream_Amb"
+    ],
+    "430807038": [
+        "Hause short-short"
+    ],
     "508944560": [
-        "???Bhaalists_DriveFoundry03"
+        "???Bhaalists_DriveFoundry03",
+        "Cassadorbattle-Nightsong_loop"
     ],
     "660219866": [],
     "419116501": [],
     "897881922": [],
     "125228109": [],
     "337986727": [],
-    "655858165": [],
+    "655858165": [
+        "ENDarkperc05",
+        "ENdarkperc05",
+        "endarkperc05"
+    ],
     "645647238": [],
     "363750140": [],
-    "507811235": [],
+    "507811235": [
+        "ChapelExit-my",
+        "Chapelexit-my",
+        "Deep-Steel_Theme",
+        "deep-Steel_Theme"
+    ],
     "949541537": [],
     "816750596": [],
     "1016263322": [],
     "258036210": [],
     "789971037": [],
-    "344850678": [],
-    "1062874932": [],
-    "477709918": [],
+    "344850678": [
+        "Sovereigndeep_Temple01"
+    ],
+    "1062874932": [
+        "Foundry03_Up Beachperc"
+    ],
+    "477709918": [
+        "Abbey_SundriesEacoustic",
+        "Sharess_Level_Harpy"
+    ],
     "969018135": [],
     "202271611": [],
     "591806325": [],
-    "348424684": [],
+    "348424684": [
+        "Drum_oneshotBBGM"
+    ],
     "452282675": [
         "AdamantinesignalNone_Brass"
     ],
     "494086067": [],
-    "1005062791": [],
+    "1005062791": [
+        "Up Countdown In10"
+    ],
     "781965": [],
     "1064462012": [],
     "510493858": [
@@ -79,40 +131,63 @@
     ],
     "298105871": [],
     "694906907": [],
-    "522431629": [],
-    "273792211": [],
-    "819226868": [],
-    "322530505": [],
+    "522431629": [
+        "Hag04_N07Dead"
+    ],
+    "273792211": [
+        "3-pianosongpianoalt"
+    ],
+    "819226868": [
+        "Leveldecision Cellar"
+    ],
+    "322530505": [
+        "Set-Whiteburnname"
+    ],
     "403994649": [],
     "616684700": [
         "ActAllDrive14_02"
     ],
     "610095852": [
-        "AssaultBhaalgoblin07Start"
+        "AssaultBhaalgoblin07Start",
+        "Setcha-Hag"
     ],
     "410798609": [],
     "127603507": [],
     "156839032": [],
     "990853558": [],
-    "973638593": [],
+    "973638593": [
+        "Avernus_Duergar_Uni"
+    ],
     "123685660": [],
-    "275195195": [],
-    "963210437": [],
+    "275195195": [
+        "Abbey Blushing_scene"
+    ],
+    "963210437": [
+        "98 ResumeLight"
+    ],
     "82460099": [],
     "248791283": [],
     "26770969": [],
-    "185121215": [],
+    "185121215": [
+        "Quartetfull Sewers"
+    ],
     "955599323": [],
     "839486322": [],
     "908532653": [],
     "297501138": [
         "Act2Ally_OfPartDeep",
-        "Act2Ally_OfPartdeep"
+        "Act2Ally_OfPartdeep",
+        "Percussive pianoclassic_Helm",
+        "Whiteburn-Violin-Quartet"
     ],
-    "89057266": [],
+    "89057266": [
+        "Sovereign_EN Mermaid"
+    ],
     "123438852": [],
     "992665702": [],
-    "449580662": [],
+    "449580662": [
+        "Stop-QueenCIN"
+    ],
     "29239391": [],
     "261371447": [
         "AstralBhaalists_In10_Stinger"
@@ -120,17 +195,26 @@
     "424114895": [],
     "916383075": [],
     "170453104": [],
-    "816064046": [],
+    "816064046": [
+        "Attack ending-Raphael"
+    ],
     "158384668": [],
     "542610798": [
         "???AbbeyLibrary07_intro"
     ],
-    "706162972": [],
+    "706162972": [
+        "Lyre-gates-Pointacoustic"
+    ],
     "535568231": [],
     "456601908": [],
     "1035100298": [],
-    "125378142": [],
-    "445195156": [],
+    "125378142": [
+        "Cine-Violin_Tower",
+        "cine-Violin_Tower"
+    ],
+    "445195156": [
+        "Blow3Of03"
+    ],
     "440056665": [
         "ActBeachperc_Of_II"
     ],
@@ -139,14 +223,22 @@
         "Act2Blushing_battle_crypt_the"
     ],
     "771692109": [],
-    "92194773": [],
+    "92194773": [
+        "NUMPartdeep Upbeat",
+        "NUMPartdeep upbeat"
+    ],
     "718334872": [],
     "161910559": [],
-    "668332895": [],
+    "668332895": [
+        "Event Brass Exploration"
+    ],
     "458354856": [],
     "240165839": [],
     "984598351": [],
-    "841467849": [],
+    "841467849": [
+        "Cine Whiteburn-my",
+        "cine Whiteburn-my"
+    ],
     "355982605": [
         "ActBeach_poolDefeatedcrashsite"
     ],
@@ -158,11 +250,14 @@
     "242794594": [],
     "844156649": [],
     "600848629": [],
-    "1033112956": [],
+    "1033112956": [
+        "Assault05 Jini Phase"
+    ],
     "914127068": [],
     "419708705": [],
     "64168329": [
-        "Act2BlushingMystic_Motif_intro"
+        "Act2BlushingMystic_Motif_intro",
+        "Amb_Hag-Free"
     ],
     "590424850": [],
     "617514256": [],
@@ -195,9 +290,16 @@
     "915458773": [],
     "226484571": [],
     "590645942": [
-        "AstralcueMain_Music"
+        "AstralcueMain_Music",
+        "AstralcueMain_music",
+        "Tutorialdarkdeepundergrounds05"
     ],
-    "1016346124": [],
+    "1016346124": [
+        "Astral10_crypt_Tower",
+        "Inside_Toggle_Motif",
+        "N07 2Darkperc",
+        "N07 2darkperc"
+    ],
     "1019939519": [],
     "606289039": [],
     "452633189": [],
@@ -210,24 +312,42 @@
     "491831110": [],
     "285123411": [],
     "37606815": [],
-    "953930906": [],
-    "397074508": [],
+    "953930906": [
+        "CircusEacoustic-Poisoned",
+        "emptyCredits_Adamantine05"
+    ],
+    "397074508": [
+        "Fight-scene_goblin",
+        "fight-scene_goblin"
+    ],
     "666190908": [],
     "742600571": [],
-    "735600903": [],
+    "735600903": [
+        "TW Downed-AR"
+    ],
     "964318641": [],
-    "999216421": [],
+    "999216421": [
+        "Lobby_Flymm Sovereigndeep"
+    ],
     "907210399": [],
-    "304970565": [],
+    "304970565": [
+        "Hope-Strings_Dungeon",
+        "Hope-strings_Dungeon"
+    ],
     "253216897": [
         "B01_StingerPoint_On",
-        "B01_stingerPoint_On"
+        "B01_stingerPoint_On",
+        "poolFlute pool11"
     ],
     "213249324": [
-        "AdamantineBhaal_BroodingAmb_01"
+        "AdamantineBhaal_BroodingAmb_01",
+        "endark End-Set",
+        "endark end-Set"
     ],
     "427009600": [],
-    "332756910": [],
+    "332756910": [
+        "Insidecut-Sorcerous_Bhaalgoblin07"
+    ],
     "371408014": [],
     "217076798": [],
     "266921455": [
@@ -236,12 +356,16 @@
     ],
     "136254808": [],
     "879953784": [],
-    "142912431": [],
+    "142912431": [
+        "Restless_classic_Spooky"
+    ],
     "255461851": [],
     "352732644": [],
     "645564779": [],
     "834648155": [],
-    "617228742": [],
+    "617228742": [
+        "2ambient-Jungle-Queen"
+    ],
     "821487521": [],
     "1005119106": [],
     "841753858": [],
@@ -257,9 +381,13 @@
         "Act209_GolemEnd_perc"
     ],
     "265080502": [],
-    "25137537": [],
+    "25137537": [
+        "1616 Cellarempty"
+    ],
     "532267094": [],
-    "836009011": [],
+    "836009011": [
+        "N06_Act10Over"
+    ],
     "697847582": [],
     "369346543": [],
     "1036643120": [],
@@ -270,51 +398,72 @@
     "709123485": [],
     "315959532": [],
     "231965331": [
-        "???BGM_Drum_Freesong"
+        "???BGM_Drum_Freesong",
+        "Point_Motif-Metal"
     ],
     "145524106": [],
-    "442605227": [],
+    "442605227": [
+        "Blow_ExtAdamantinesignal"
+    ],
     "731598410": [],
     "607005516": [],
     "899501400": [],
     "363617414": [],
     "137137968": [],
-    "58598841": [],
+    "58598841": [
+        "Abbey09Lyrecut",
+        "N01exitDownedfull_G3",
+        "Vlaakith-Endclassic_Forest",
+        "Vlaakith-Endclassic_forest"
+    ],
     "789148833": [],
     "1033655524": [],
     "347470204": [],
     "980736768": [
         "???Ambient_MyrkulSovereignShield"
     ],
-    "552056968": [],
+    "552056968": [
+        "goblin Win-Gem"
+    ],
     "336832826": [],
     "886156620": [],
     "493057058": [],
-    "812637588": [],
-    "334371648": [],
+    "812637588": [
+        "Pause_Checkpoint_Circus"
+    ],
+    "334371648": [
+        "N98_OutsidetheMyconid"
+    ],
     "175351652": [],
     "685652932": [
         "???Adamantine_goblin12alt",
         "AstralBeachDownedfull_oneshot",
-        "Sundries-Cargo-"
+        "Sundries-Cargo-",
+        "musicnameshortLose"
     ],
     "191443921": [],
     "225082305": [],
     "4500373": [],
     "997687241": [],
     "269168392": [],
-    "699495403": [],
+    "699495403": [
+        "AdamantinesignalCine01song_06"
+    ],
     "891923547": [],
     "587282455": [],
     "38892510": [],
     "422031485": [],
     "365581662": [],
     "756315453": [],
-    "543622899": [],
+    "543622899": [
+        "Foundry-Spooky_Dom"
+    ],
     "591284156": [],
     "3346227": [],
     "901886862": [],
-    "568020421": [],
+    "568020421": [
+        "Adamantine05Pause-Chamber"
+    ],
     "511510173": [],
     "338995776": [
         "???AbbeyStop_The05",
@@ -330,25 +479,39 @@
     "965021647": [],
     "5946054": [],
     "61633357": [],
-    "397836270": [],
-    "815714137": [],
-    "767536088": [],
+    "397836270": [
+        "08Dungeon Adamantinereset",
+        "Killed-Adamantinesignal-House",
+        "Killed-Adamantinesignal-house"
+    ],
+    "815714137": [
+        "Level-Recruitment_Act08"
+    ],
+    "767536088": [
+        "Act209 Attack-14"
+    ],
     "678357481": [],
     "692401804": [],
-    "45384686": [],
+    "45384686": [
+        "Nightsong thralls_endark"
+    ],
     "40154063": [],
     "902685710": [],
     "274250347": [],
     "825683369": [],
     "81911720": [],
-    "377807041": [],
+    "377807041": [
+        "InsidecutFreesong_Dungeon"
+    ],
     "507234599": [
         "???Bhaalists2Hag04"
     ],
     "295041706": [
         "???10_Tower_musicname"
     ],
-    "474958584": [],
+    "474958584": [
+        "FinalP1-Surgery"
+    ],
     "82602960": [],
     "933750591": [
         "Assault10_Myst_Sovereign_Start"
@@ -357,23 +520,33 @@
         "Adamantine07_Nightsong_Part_02"
     ],
     "561837415": [
-        "???ApparatusDramaticPartoneshot"
+        "???ApparatusDramaticPartoneshot",
+        "Laezel-WMP-Sovereignalt"
     ],
     "453486636": [],
-    "122487587": [],
+    "122487587": [
+        "AssaultDenMyconids"
+    ],
     "781426296": [],
     "237906121": [],
     "52270697": [],
     "524272103": [],
-    "125739390": [],
+    "125739390": [
+        "Traversal Screen-Astral10"
+    ],
     "369706158": [],
     "1040207047": [],
     "125325045": [
-        "B0408Part_intro"
+        "B0408Part_intro",
+        "B0408Part_Intro"
     ],
     "66655620": [],
     "794997846": [],
-    "613990790": [],
+    "613990790": [
+        "C 2_Music",
+        "C 2_music",
+        "DISTILLER3_03"
+    ],
     "309429613": [
         "Adamantine05Control_Sovereignalt"
     ],
@@ -387,29 +560,43 @@
     ],
     "109655036": [
         "AstralBridge_StopDeep_Shield",
-        "AstralBridge_Stopdeep_Shield"
+        "AstralBridge_Stopdeep_Shield",
+        "None-perc-Resume"
     ],
     "791012198": [],
     "318716783": [],
-    "638896220": [],
+    "638896220": [
+        "Orin_Leasel_Shield"
+    ],
     "1017977538": [],
     "590731246": [],
     "317843368": [],
-    "907073716": [],
+    "907073716": [
+        "Cine-N07 Myconids",
+        "cine-N07 Myconids"
+    ],
     "92618785": [],
     "325377676": [
         "???09_Karlach_3_acoustic"
     ],
     "173249800": [],
     "618873272": [],
-    "351505849": [],
+    "351505849": [
+        "None-BeachDrum"
+    ],
     "806103158": [],
     "818179339": [],
     "858397309": [
         "CINCassadorbattle_IIShield"
     ],
-    "520508916": [],
-    "144780863": [],
+    "520508916": [
+        "Hope_Credits impersonation",
+        "psy-Drum_Act209"
+    ],
+    "144780863": [
+        "Cellar_N01_02",
+        "Partoneshot_Bhaalgoblin07 Queen"
+    ],
     "812791441": [],
     "28583464": [],
     "95660154": [
@@ -419,58 +606,100 @@
         "CIN0306_Darkperc",
         "CIN0306_darkperc"
     ],
-    "744438574": [],
-    "132178643": [],
+    "744438574": [
+        "Den-Adamantine10battleMynsc"
+    ],
+    "132178643": [
+        "Brooding LaezelMenu",
+        "Brooding Laezelmenu"
+    ],
     "1050764518": [
         "CIN01ExitChapelFuneral",
         "CIN01exitChapelFuneral"
     ],
-    "72176328": [],
+    "72176328": [
+        "Dreams B0408_BGM"
+    ],
     "547540558": [],
     "892888211": [],
-    "838154337": [],
+    "838154337": [
+        "01-CircusIintro"
+    ],
     "604624833": [],
     "243695005": [],
-    "62100240": [],
-    "38845952": [],
+    "62100240": [
+        "Hag04Act03short"
+    ],
+    "38845952": [
+        "B0504_battle alt",
+        "II-Shadowheartcrypt"
+    ],
     "316744865": [
         "Act08Lyre_Drive_oneshot"
     ],
-    "670366740": [],
+    "670366740": [
+        "CampsiteendarkFade",
+        "Cargo_Resume City",
+        "Cargo_Resume city"
+    ],
     "898041284": [],
     "172919993": [],
-    "877297356": [],
+    "877297356": [
+        "UpperVlaakith-Circle"
+    ],
     "357270557": [],
     "399131038": [],
-    "326280386": [],
+    "326280386": [
+        "MystResistB"
+    ],
     "228054202": [],
     "616808392": [],
     "913084769": [],
-    "182568472": [],
-    "1039260742": [],
+    "182568472": [
+        "VlaakithBBGM_Upper"
+    ],
+    "1039260742": [
+        "PL positive Golem"
+    ],
     "290005744": [
         "AdamantineBlushingQuartet_10Music"
     ],
     "119268141": [],
     "893978527": [],
-    "88969679": [],
+    "88969679": [
+        "Durge-Cinedeep-Drum",
+        "General 3 Runepowder",
+        "Sharess-Motif_Brain",
+        "Sharess-Motif_brain"
+    ],
     "399674302": [],
     "9886974": [],
     "770318848": [],
     "541463443": [],
     "960494065": [],
-    "89847182": [],
+    "89847182": [
+        "TU Bhaalists2_Hideout"
+    ],
     "786631652": [],
     "228036283": [],
     "72334491": [],
-    "260404297": [],
+    "260404297": [
+        "LightPoisoned_Goblins",
+        "goblin12alt-DeadHorror"
+    ],
     "529386638": [],
-    "249487744": [],
+    "249487744": [
+        "Explo_atCreation",
+        "Explo_atcreation"
+    ],
     "830826618": [],
     "902555801": [],
     "383121946": [],
     "405685474": [],
-    "911509339": [],
+    "911509339": [
+        "Cloister-Bhaalists Act03",
+        "Spooky-DrumEnter"
+    ],
     "618731252": [],
     "864518828": [],
     "419029031": [],
@@ -485,20 +714,34 @@
     ],
     "44507341": [],
     "38108776": [],
-    "1017365244": [],
-    "795794231": [],
-    "99034267": [],
+    "1017365244": [
+        "14 IR-B06"
+    ],
+    "795794231": [
+        "ARResist_cut"
+    ],
+    "99034267": [
+        "Music N0306-Nightsong",
+        "music N0306-Nightsong"
+    ],
     "532357432": [],
     "957874702": [],
     "494002534": [
         "BCassador_pool11_03"
     ],
     "847258176": [],
-    "704782549": [],
-    "879466349": [],
+    "704782549": [
+        "Harpy_MyconidB06"
+    ],
+    "879466349": [
+        "EnemyM Dominated",
+        "s_Dominated-cha"
+    ],
     "235277847": [],
     "864757594": [],
-    "896532771": [],
+    "896532771": [
+        "Dragon_DurgePower"
+    ],
     "754400024": [],
     "856911435": [],
     "617369888": [],
@@ -518,23 +761,34 @@
     "119412613": [],
     "47358801": [],
     "885246069": [],
-    "255077492": [],
+    "255077492": [
+        "IndoorPortalBank"
+    ],
     "866660156": [],
     "133969432": [],
     "844438947": [],
     "523327953": [
         "Assault05Cellar_Checkpoint_Brass",
-        "AstralAll_0401perc"
+        "AstralAll_0401perc",
+        "Of03-C-at"
     ],
     "751866258": [
-        "BBlushing_Dead_Endclassic"
+        "BBlushing_Dead_Endclassic",
+        "N0306_choir Under"
     ],
     "925660935": [],
-    "224755577": [],
-    "96679933": [],
+    "224755577": [
+        "Golem10_1 Watch"
+    ],
+    "96679933": [
+        "Astarion-Astralcue_Spawn",
+        "End-Defeatedcrashsite Event",
+        "end-Defeatedcrashsite Event"
+    ],
     "818540646": [
         "AdamantineAct_Orch_Inside_Deep",
-        "AdamantineAct_Orch_Inside_deep"
+        "AdamantineAct_Orch_Inside_deep",
+        "State-Cargo-Morphic"
     ],
     "801058422": [],
     "249326599": [],
@@ -542,31 +796,48 @@
     "485490250": [
         "AstralBhaalistDramatic2acoustic"
     ],
-    "943035314": [],
+    "943035314": [
+        "10goblin 2 Cinematic"
+    ],
     "672367795": [],
     "660761501": [],
     "732596896": [],
     "418052023": [],
     "497595636": [],
-    "271064150": [],
+    "271064150": [
+        "RequiemDRUNTutorialdark"
+    ],
     "712988654": [],
-    "949110310": [],
+    "949110310": [
+        "Daisy_Killedmy empty"
+    ],
     "818098262": [],
     "814682998": [],
-    "672596337": [],
+    "672596337": [
+        "Cellar-PrisonHav",
+        "Cellar-prisonHav"
+    ],
     "40122019": [
         "AstralBGM_Temple_14_Final"
     ],
-    "195433692": [],
+    "195433692": [
+        "BLevelending"
+    ],
     "854617041": [],
     "742791668": [],
     "1066110685": [],
-    "704578401": [],
+    "704578401": [
+        "SW O_Adamantine"
+    ],
     "11775136": [],
     "524828392": [],
     "574607982": [],
-    "3427424": [],
-    "579852681": [],
+    "3427424": [
+        "Guitar Checkpoint Ketheric"
+    ],
+    "579852681": [
+        "Golem_Funeral Gen"
+    ],
     "419585531": [],
     "396184369": [],
     "1020556079": [],
@@ -576,49 +847,90 @@
     "703138590": [
         "Act2Campsite14_Music",
         "BAdamantine_2AmbientStinger",
-        "BAdamantine_2ambientStinger"
+        "BAdamantine_2ambientStinger",
+        "Act2Campsite14_music"
     ],
     "507435182": [],
     "389979845": [],
-    "43477026": [],
-    "507087102": [],
-    "1058120055": [],
-    "535980615": [],
+    "43477026": [
+        "Myrkull_classic swamp"
+    ],
+    "507087102": [
+        "B-Daisy Uni",
+        "Sanctum-Shield_12"
+    ],
+    "1058120055": [
+        "Chult State UN"
+    ],
+    "535980615": [
+        "Daisy Assault05-Watch"
+    ],
     "962193931": [],
     "805443549": [],
     "366205071": [],
-    "262157542": [],
+    "262157542": [
+        "Forest07Destroyed",
+        "Over_Fight Wyrms",
+        "Over_fight Wyrms",
+        "Quartet Leasel-Cargo",
+        "forest07Destroyed"
+    ],
     "333519228": [],
-    "266507119": [],
-    "43128921": [],
+    "266507119": [
+        "InFleyer_Downed",
+        "inFleyer_Downed"
+    ],
+    "43128921": [
+        "0401perc PointLose",
+        "Fade_AllyMotif"
+    ],
     "230747870": [],
     "541081664": [],
     "52778681": [],
-    "946960729": [],
+    "946960729": [
+        "Exit_Eacoustic-Stop",
+        "exit_Eacoustic-Stop"
+    ],
     "662689649": [],
-    "176799189": [],
+    "176799189": [
+        "05 romance Credits",
+        "s_Dominated Reset",
+        "s_Dominated reset"
+    ],
     "545607879": [],
-    "659591979": [],
-    "300376323": [],
+    "659591979": [
+        "Act01battle3_Music_goblin",
+        "Act01battle3_music_goblin",
+        "Vlaakith_Astral98reset Light"
+    ],
+    "300376323": [
+        "Outsidethe Adamantine07_Point"
+    ],
     "1072152952": [],
     "957860867": [],
     "525112256": [],
     "311153247": [],
     "363793141": [],
-    "768555350": [],
+    "768555350": [
+        "Elevator-Spawn-Act"
+    ],
     "684360956": [
         "Act2_Quartet_03_I"
     ],
     "573854476": [],
     "40848632": [],
     "187175698": [
-        "Act2Cassador_Start_pianoclassic"
+        "Act2Cassador_Start_pianoclassic",
+        "romance_Defeated_Char06"
     ],
     "692574782": [],
     "240939713": [
         "BBhaal_Golem10Avernus"
     ],
-    "473974650": [],
+    "473974650": [
+        "Strings-romance room",
+        "strings-romance room"
+    ],
     "743431008": [],
     "145704395": [],
     "591103050": [],
@@ -627,58 +939,106 @@
     "1022648134": [
         "Act2BlushingBrainBacoustic"
     ],
-    "853467947": [],
+    "853467947": [
+        "CIN Laezel_Myconids"
+    ],
     "1014164692": [
         "Adamantine10battle_14_acoustic"
     ],
-    "466017574": [],
-    "833090231": [],
+    "466017574": [
+        "End Pre-Live",
+        "End Pre-live",
+        "end Pre-Live",
+        "end Pre-live"
+    ],
+    "833090231": [
+        "Classical-Adamantinereset_2"
+    ],
     "786650374": [
         "BChar06_P1_Final"
     ],
     "727620302": [],
-    "618480145": [],
-    "943832319": [],
+    "618480145": [
+        "LightPrison-SC",
+        "Lightprison-SC",
+        "Nautiloid Control Haven"
+    ],
+    "943832319": [
+        "EN_Adamantineperc 2"
+    ],
     "26275643": [],
-    "210070573": [],
+    "210070573": [
+        "Destroyed_Meeting_Attackoneshot04",
+        "Destroyed_meeting_Attackoneshot04"
+    ],
     "424994005": [
         "AdamantineAttackRequiemOf03"
     ],
     "4507536": [],
     "792229736": [],
     "51982098": [
-        "AdamantineAbbey09Win_"
+        "AdamantineAbbey09Win_",
+        "Under_???-crypt"
     ],
-    "160184596": [],
+    "160184596": [
+        "NUM-Lyre Point"
+    ],
     "314430205": [
         "AdamantineAttackoneshot04Avernus"
     ],
     "532588836": [
-        "BBankPalace_Freeperc"
+        "BBankPalace_Freeperc",
+        "pianoaltAdamantine98_Assault08"
     ],
     "417125814": [],
-    "57156477": [],
-    "916465983": [],
+    "57156477": [
+        "EventgatesTension",
+        "evil Rock Sharess"
+    ],
+    "916465983": [
+        "B01-CircleTavern"
+    ],
     "229259970": [],
-    "849426754": [],
+    "849426754": [
+        "InsideForest crypt",
+        "Insideforest crypt"
+    ],
     "879761718": [],
     "947243840": [],
     "57940775": [],
-    "461761067": [],
+    "461761067": [
+        "Sewers Jini Temple"
+    ],
     "687534030": [],
     "927842166": [
         "AdamantineIOutsidethe",
-        "???CazadorRafael_P1_cut"
+        "???CazadorRafael_P1_cut",
+        "Lite Lute-Free"
     ],
     "948127713": [],
     "241370687": [],
     "190130297": [],
-    "689707574": [],
+    "689707574": [
+        "Highhall-EndQuartet",
+        "Highhall-endQuartet"
+    ],
     "72965420": [],
-    "150726355": [],
-    "835137207": [],
-    "976652416": [],
-    "388742447": [],
+    "150726355": [
+        "All_BGO_Adamantine98",
+        "Recruitment_B01-Bridge",
+        "Recruitment_B01-bridge"
+    ],
+    "835137207": [
+        "MoonriseDark_CR",
+        "Moonrisedark_CR"
+    ],
+    "976652416": [
+        "StatusHighhall-N07"
+    ],
+    "388742447": [
+        "-Duergar-02",
+        "Cellar_Chamber_Funeral"
+    ],
     "289527487": [],
     "673613317": [],
     "502495457": [],
@@ -689,64 +1049,110 @@
         "Act2AdamantinepercSovereigndeep"
     ],
     "638610846": [
-        "CINBhaalistQuartetBGMMusic"
+        "CINBhaalistQuartetBGMMusic",
+        "Rafael-Ally-Bhaalist"
     ],
     "195394000": [],
-    "1007864204": [],
+    "1007864204": [
+        "Darkperc-1-perc",
+        "darkperc-1-perc",
+        "endingOrch_3",
+        "endingorch_3"
+    ],
     "288735536": [],
     "561417600": [],
     "403521044": [],
-    "968900150": [],
-    "136993076": [],
+    "968900150": [
+        "Strings Cazador On",
+        "strings Cazador On"
+    ],
+    "136993076": [
+        "Cine01songRest Uni",
+        "Goblins_BBGM-All",
+        "TensionEstate-06"
+    ],
     "123077464": [],
-    "639824668": [],
+    "639824668": [
+        "Darkperc-MystClassical",
+        "darkperc-MystClassical"
+    ],
     "963957789": [
         "Act01battle3_03"
     ],
     "634853781": [],
-    "894264108": [],
+    "894264108": [
+        "Cinematic deathOrch",
+        "Cinematic deathorch"
+    ],
     "610463": [],
     "229603961": [
         "AssaultAmbient_Cloister_BasementHall"
     ],
-    "186552743": [],
+    "186552743": [
+        "DeadHell-Pause"
+    ],
     "544368922": [
         "???04thralls_07_acoustic"
     ],
-    "183545190": [],
+    "183545190": [
+        "Nautiloid-BBGM-Char06"
+    ],
     "9646929": [],
     "543965109": [
-        "AdamantineBhaal_Cine01song"
+        "AdamantineBhaal_Cine01song",
+        "Jaheira Knights_Durge"
     ],
     "702002886": [],
-    "884140357": [],
+    "884140357": [
+        "Point N09Temple"
+    ],
     "727774202": [],
     "292345525": [
         "Astral98reset_psy_name"
     ],
     "565708481": [],
-    "894226315": [],
-    "631435117": [],
+    "894226315": [
+        "Amb_Raft Upper"
+    ],
+    "631435117": [
+        "0401perc Act209Assault05"
+    ],
     "804780227": [],
-    "832300272": [],
+    "832300272": [
+        "Tribunal City_Foundry03",
+        "Tribunal city_Foundry03"
+    ],
     "825601265": [],
     "612663844": [],
     "230293225": [],
-    "575728495": [],
+    "575728495": [
+        "Pointacoustic-3Act03"
+    ],
     "434818051": [],
     "173128006": [],
     "514429516": [],
-    "886843781": [],
+    "886843781": [
+        "Myrkull Music_Duergar",
+        "Myrkull music_Duergar"
+    ],
     "458152258": [
         "CINBhaalmeeting_02_Start"
     ],
     "412068932": [],
     "751297498": [],
     "907542161": [],
-    "674670417": [],
+    "674670417": [
+        "Sanctum_MyrkullInsidecut"
+    ],
     "579683949": [],
     "140155603": [],
-    "741917042": [],
+    "741917042": [
+        "CineCreation-Sneaking",
+        "Cinecreation-Sneaking",
+        "Ext-1Act01battle3",
+        "cineCreation-Sneaking",
+        "cinecreation-Sneaking"
+    ],
     "529537694": [],
     "827793854": [],
     "133716059": [
@@ -754,23 +1160,38 @@
         "CINAdamantinereset_dark04"
     ],
     "574193815": [
-        "Assault08Estate_DefeatedStinger"
+        "Assault08Estate_DefeatedStinger",
+        "Cazadorsignal-Act2-Defeated"
     ],
-    "654500639": [],
+    "654500639": [
+        "Cine_Cazador_Act10",
+        "cine_Cazador_Act10"
+    ],
     "935102643": [],
     "291382082": [],
     "873531484": [],
     "293146221": [],
-    "450441729": [],
+    "450441729": [
+        "Plane O-Darkdeep"
+    ],
     "744186994": [],
-    "1031476565": [],
-    "552398318": [],
+    "1031476565": [
+        "Crash Up_ending"
+    ],
+    "552398318": [
+        "II Motif-12"
+    ],
     "1064339366": [],
     "524998723": [
         "Adamantine08Dead_full_Music"
     ],
     "533167408": [
-        "AdamantineAssault_Lyre_pianoalt"
+        "AdamantineAssault_Lyre_pianoalt",
+        "3ChantAct1616",
+        "Astral10 goblin The05",
+        "Portal-End_short",
+        "Portal-end_short",
+        "RequiemCinedeep-Assault08"
     ],
     "26085591": [],
     "305267028": [],
@@ -786,43 +1207,68 @@
     "310320896": [],
     "253634529": [],
     "815683180": [],
-    "263987380": [],
-    "773428392": [],
+    "263987380": [
+        "B-Cassador Estate"
+    ],
+    "773428392": [
+        "Freeperc HopeSanctum"
+    ],
     "531747086": [],
     "996022909": [],
-    "200800259": [],
+    "200800259": [
+        "In10 NUM-Abbey"
+    ],
     "680770148": [],
     "424684390": [],
     "873862217": [],
     "947949886": [
-        "Act03_resetPoint"
+        "Act03_resetPoint",
+        "Act03_ResetPoint",
+        "Jungle Upbeat_10goblin",
+        "Jungle upbeat_10goblin"
     ],
     "18646493": [],
     "457292078": [],
     "537315989": [],
     "577231537": [],
-    "641173962": [],
+    "641173962": [
+        "Fortress_P1 Library"
+    ],
     "744760051": [],
     "972698394": [],
     "743962217": [],
     "672910516": [],
     "1036338321": [],
-    "640121521": [],
-    "553297949": [],
+    "640121521": [
+        "Dream Free-Moonrise"
+    ],
+    "553297949": [
+        "Raphaels Fight-Killed",
+        "Raphaels fight-Killed"
+    ],
     "251323914": [
-        "Act1616_Spawn_0703"
+        "Act1616_Spawn_0703",
+        "Gen_my_Wyrm"
     ],
     "474329706": [],
     "962205209": [
-        "???Ally_Win_Defeated_oneshot"
+        "???Ally_Win_Defeated_oneshot",
+        "Insidecut cue Act209"
     ],
     "716660540": [
         "CIN09Dead_kingStart"
     ],
-    "153635255": [],
-    "480189603": [],
+    "153635255": [
+        "Stinger-Gortash-Lute",
+        "stinger-Gortash-Lute"
+    ],
+    "480189603": [
+        "decision_Centre House",
+        "decision_Centre house"
+    ],
     "821478179": [
-        "AdamantineBhaalists_PhaseHag05"
+        "AdamantineBhaalists_PhaseHag05",
+        "Brooding_Horrorgoblin12alt"
     ],
     "786437549": [],
     "969426566": [],
@@ -830,14 +1276,24 @@
         "BAlly_MainFortressDeep",
         "BAlly_MainFortressdeep"
     ],
-    "102017681": [],
+    "102017681": [
+        "Signal-Partdeep_Percussive",
+        "signal-Partdeep_Percussive"
+    ],
     "197445663": [],
     "484963525": [],
     "457704810": [],
     "468655131": [],
     "394837035": [],
-    "823954173": [],
-    "998840004": [],
+    "823954173": [
+        "pianoclassicDowned_Sharess"
+    ],
+    "998840004": [
+        "N07_Orch_Defeatedcrashsite",
+        "N07_orch_Defeatedcrashsite"
+    ],
     "217681359": [],
-    "101222644": []
+    "101222644": [
+        "N01_Eacoustic-Win"
+    ]
 }
